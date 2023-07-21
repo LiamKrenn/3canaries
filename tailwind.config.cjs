@@ -7,9 +7,6 @@ import skeleton from '@skeletonlabs/skeleton/tailwind/skeleton.cjs'
 module.exports = {
 	darkMode: 'class',
 	content: ['./src/**/*.{html,js,svelte,ts}', join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')],
-	theme: {
-		extend: {},
-	},
 	plugins: [forms,typography,...skeleton()],
 
 	theme: {
@@ -20,6 +17,8 @@ module.exports = {
 		
 			sm: '550px',
 			// => @media (min-width: 665px) { ... }
+
+			tc: '655px',
 
 			md: '768px',
 			// => @media (min-width: 768px) { ... }

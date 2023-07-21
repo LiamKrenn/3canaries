@@ -1,19 +1,41 @@
 <script lang="ts">
+	import Socials from './Socials.svelte';
+
 	import NavItem from '$lib/components/NavItem.svelte';
+	import FacebookIcon from '$lib/FacebookIcon.svelte';
+	import InstagramIcon from '$lib/InstagramIcon.svelte';
 	import { items } from '$lib/NavItems';
+	import { LightSwitch } from '@skeletonlabs/skeleton';
+	import SideNav from './SideNav.svelte';
 </script>
 
-<div class="flex">
-	<div class="flex lg:w-fit w-full lg:justify-start lg:items-center lg:mx-2 justify-center flex-shrink-0">
-		<a href="/">
+<div class="flex justify-between w-screen">
+	<div class="flex h-20 justify-center items-center pl-1.5">
+		<a class=" lg:w-fit lg:items-center mx-2 justify-center flex-shrink-0" href="/">
 			<img
 				class="w-20 p-0.5 hover:scale-105 duration-150 select-none"
-				src="images/logo_tr.webp"
+				src="images/C_TCR_notext_cut.webp"
 				alt="3 Canaries Logo"
 			/>
 		</a>
+		<div class="tc:flex hidden select-none">
+			<img class="ml-2 h-10 lg:hidden flex" src="images/C_TC_text_cut.webp" alt="Three Canaries" />
+		</div>
+		{#each items as item}
+			<NavItem {item} attrs="lg:flex  hidden h-20 xl:px-4 px-2.5 xl:text-2xl text-xl" />
+		{/each}
 	</div>
-	{#each items as item}
-		<NavItem {item} attrs="lg:flex  hidden h-20 px-4 " />
-	{/each}
+
+	<div class="flex justify-center items-center">
+		<div class="xl:inline hidden mr-4">
+			<LightSwitch />
+		</div>
+		<a class="xl:mr-2.5" href="https://www.discogs.com/user/sckrenn/collection" target="_blank">
+			<button class="xs:flex hidden btn variant-ghost-primary h-12 hover:brightness-75 select-none">
+				My Collection
+			</button>
+		</a>
+		<div class="xl:flex hidden mr-1.5"><Socials /></div>
+		<SideNav />
+	</div>
 </div>

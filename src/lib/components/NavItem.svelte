@@ -5,7 +5,7 @@
 	export let attrs: string;
 	export let item: Item;
 
-  let iattr = attrs + " justify-center items-center text-2xl whitespace-nowrap select-none"
+	let iattr = attrs + ' justify-center items-center whitespace-nowrap select-none';
 </script>
 
 {#if $page.url.pathname == item.link}
