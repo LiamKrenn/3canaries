@@ -12,11 +12,15 @@
 	import NavBar from '$lib/components/NavBar.svelte';
 	import { items } from '$lib/NavItems';
 	import Footer from '$lib/components/Footer.svelte';
+	
+	import type { PageData } from './$types';
+  export let data: PageData;
+	export let taas;
 </script>
 
-<AppShell>
+<AppShell class="bg-white dark:bg-surface-800">
 	<svelte:fragment slot="header">
-		<AppBar padding="p-0" gap="gap-0">
+		<AppBar padding="p-0" gap="gap-0" background="bg-white dark:bg-surface-800">
 			<NavBar />
 		</AppBar>
 	</svelte:fragment>
