@@ -9,9 +9,9 @@
 </script>
 
 {#if $page.url.pathname == item.link}
-	<a class="navselect {iattr} " href={item.link}>{item.title}</a>
+	<a class="navselect {iattr} " href={item.link} data-sveltekit-preload-data>{item.title}</a>
 {:else}
-	<a class="navunselect {iattr}" href={item.link}>{item.title}</a>
+	<a class="navunselect {iattr}" href={item.link} data-sveltekit-preload-data>{item.title}</a>
 {/if}
 
 <style>

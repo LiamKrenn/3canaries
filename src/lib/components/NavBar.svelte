@@ -30,7 +30,7 @@
 		<div class="xl:inline hidden mr-4">
 			<LightSwitch />
 		</div>
-		<a class="xl:mr-2.5" href="https://www.discogs.com/user/sckrenn/collection" target="_blank">
+		<a class="xl:mr-2.5" href="https://www.discogs.com/user/sckrenn/collection" target="_blank" rel="noreferrer">
 			<button class="xs:flex hidden btn variant-ghost-primary h-12 hover:brightness-75 select-none">
 				My Collection
 			</button>
