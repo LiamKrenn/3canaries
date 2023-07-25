@@ -10,16 +10,16 @@ export const items = [
     link: '/discogs'
   },
   {
-    title: 'Das Team',
-    link: '/team'
-  },
-  {
     title: 'News & Events',
     link: '/news'
   },
   {
     title: 'Kontakt',
     link: '/contact'
+  },
+  {
+    title: 'Das Team',
+    link: '/team'
   },
   {
     title: 'Partner',
