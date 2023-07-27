@@ -4,26 +4,25 @@
 	import { navigating } from '$app/stores';
 	import { modeCurrent } from '@skeletonlabs/skeleton';
 	export let data: PageData;
-
-	console.log(data.partners[0]);
-	
 </script>
 
-<div class="py-20 w-full flex justify-center items-center bg-secondary-500 dark:bg-primary-900">
-	<div class="">
-		<h1 class="h1 ">Unsere Partner...</h1>
-		<div class="flex mt-16">
-			{#each data.partners as partner}
-		<div class="mx-4">
-			<img class="h-80" src="{partner.logourl}"/>
-			<p class="text-4xl mt-6">{@html partner.name}</p>
-			<p class="text-2xl mt-2">{partner.description}</p>
-			<a class="mt-8 btn bg-black text-white px-8 rounded-none" href="{partner.link}" target="_blank" rel="noreferrer">Mehr lesen</a>
-		</div>
+<div
+	class="py-20 w-full flex flex-col justify-center items-center bg-secondary-500 dark:bg-primary-900"
+>
+	<h1 class="h1">Unsere Partner...</h1>
+	<div class="flex mt-16 flex-row flex-wrap h-full">
+		{#each data.partners as partner}
+			<div class="mx-4 shrink-0 h-full">
+				<img class="h-[330px]" src={partner.logourl} alt={partner.name} />
+				<h1 class="text-3xl mt-6 h1">{@html partner.name}</h1>
+				<p class="text-xl mt-4 w-[330px]">{partner.description}</p>
+				<a
+					class="mt-8 btn bg-black text-white px-8 rounded-none relative bottom-0"
+					href={partner.link}
+					target="_blank"
+					rel="noreferrer">Mehr lesen</a
+				>
+			</div>
 		{/each}
-		</div>
-		
 	</div>
 </div>
-
-
