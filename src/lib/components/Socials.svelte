@@ -1,7 +1,6 @@
 <script lang="ts">
-	import DiscIcon from '$lib/DiscIcon.svelte';
-	import FacebookIcon from '$lib/FacebookIcon.svelte';
-	import InstagramIcon from '$lib/InstagramIcon.svelte';
+	import FacebookIcon from '$lib/icons/FacebookIcon.svelte';
+	import InstagramIcon from '$lib/icons/InstagramIcon.svelte';
 </script>
 
 <a

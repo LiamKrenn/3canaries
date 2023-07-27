@@ -2,8 +2,6 @@
 	import Socials from './Socials.svelte';
 
 	import NavItem from '$lib/components/NavItem.svelte';
-	import FacebookIcon from '$lib/FacebookIcon.svelte';
-	import InstagramIcon from '$lib/InstagramIcon.svelte';
 	import { items } from '$lib/NavItems';
 	import { LightSwitch } from '@skeletonlabs/skeleton';
 	import SideNav from './SideNav.svelte';

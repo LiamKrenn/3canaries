@@ -1,6 +1,6 @@
 <script lang="ts">
-	import CloseIcon from '$lib/CloseIcon.svelte';
-	import MenuIcon from '$lib/MenuIcon.svelte';
+	import CloseIcon from '$lib/icons/CloseIcon.svelte';
+	import MenuIcon from '$lib/icons/MenuIcon.svelte';
 	import { Drawer, drawerStore, type DrawerSettings, LightSwitch } from '@skeletonlabs/skeleton';
 	import NavItem from './NavItem.svelte';
 	import { items } from '$lib/NavItems';
