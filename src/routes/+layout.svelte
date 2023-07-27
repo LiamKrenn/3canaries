@@ -13,9 +13,6 @@
 	import { items } from '$lib/NavItems';
 	import Footer from '$lib/components/Footer.svelte';
 	
-	import type { PageData } from './$types';
-  export let data: PageData;
-	export let taas;
 </script>
 
 <AppShell class="bg-white dark:bg-surface-800">
