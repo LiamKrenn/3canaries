@@ -18,10 +18,6 @@ export const items = [
     link: '/contact'
   },
   {
-    title: 'Das Team',
-    link: '/team'
-  },
-  {
     title: 'Partner',
     link: '/partner'
   }
