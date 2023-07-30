@@ -6,8 +6,8 @@ export const items = [
     link: '/'
   },
   {
-    title: 'Discogs',
-    link: '/discogs'
+    title: 'Öffnungszeiten',
+    link: '/open-times'
   },
   {
     title: 'News & Events',
