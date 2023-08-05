@@ -20,4 +20,5 @@ export interface Times {
 	from: string;
 	to: string;
 	event: string;
+	event_description: string;
 }
