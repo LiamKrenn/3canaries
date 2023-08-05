@@ -47,7 +47,7 @@
 <div class="w-full flex flex-row flex-wrap py-2 justify-center items-start ">
 	<div class="card w-[40vw] h-max-[30rem] mx-4 my-2 rounded-lg variant-filled-secondary">
 		<header>
-			<img class=" w-[40vw]  rounded-lg shrink-0 " src="images/meinladen.webp" />
+			<img class=" w-[40vw] rounded-lg shrink-0 " src="images/meinladen.webp" />
 		</header>
 		<div class="p-6">
 			<h3 class="h3 mb-2">Mein Laden.</h3>
