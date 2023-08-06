@@ -1,16 +1,25 @@
-import type { Times } from '$lib/Types';
+import { getTimesPerMonth } from '$lib/PocketBase';
 import type { PageServerLoad } from './$types';
 import PocketBase, { ListResult } from 'pocketbase';
+import type { Times } from '$lib/Types';
 
 export const load = (async () => {
 	const pb: PocketBase = new PocketBase('http://127.0.0.1:8090');
-	const date = new Date().toJSON().slice(0, 10);
-	const result: ListResult<Times> = await pb.collection('times').getList<Times>(1, 999999, {
-		filter: `from >= "${date} 00:00:00"`
-	});
-	const p: Times[] = structuredClone(result.items);
+	const res = getTimesPerMonth(new Date());
+	const record = (await pb.collection('times').getList(1,1,{sort: '-from'})).items[0]
+	const maxlim: Date = new Date(record.from)
+	const maxmonth: number = maxlim.getMonth()
+	const maxyear: number = maxlim.getFullYear()
+	const options: Intl.DateTimeFormatOptions = {
+		month: 'long',
+		year: 'numeric'
+	};
+	const monthYearText = new Date().toLocaleDateString('de-DE', options);
 
 	return {
-		times: p
+		times: res,
+		maxmonth: maxmonth,
+		maxyear: maxyear,
+		monthYearText: monthYearText
 	};
 }) satisfies PageServerLoad;
