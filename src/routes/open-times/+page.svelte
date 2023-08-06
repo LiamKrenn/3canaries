@@ -1,12 +1,13 @@
 <script lang="ts">
-	import OpenTimeCard from '$lib/components/OpenTimeCard.svelte';
-import type { PageData } from './$types';
+	import Calendar from '$lib/components/Calendar.svelte';
+	import type { PageData } from './$types';
 
-export let data: PageData;
+	export let data: PageData;
+
+	const times = data.times;
+	const maxmonth = data.maxmonth;
+	const maxyear = data.maxyear;
+	const monthYearText = data.monthYearText
 </script>
 
-<div class="flex">
-	{#each data.times as time (time.id)}
-	<OpenTimeCard time={time}/>
-{/each}
-</div>
+<Calendar {times} {maxmonth} {maxyear} {monthYearText}/>
