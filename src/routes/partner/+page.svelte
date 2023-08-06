@@ -7,7 +7,7 @@
 </script>
 
 <div
-	class="py-20 w-full flex flex-col justify-center items-center bg-secondary-500 dark:bg-primary-900"
+	class="py-20 w-full flex flex-col justify-center items-center bg-secondary-400 dark:bg-secondary-600 dark:text-surface-900"
 >
 	<h1 class="h1">Unsere Partner...</h1>
 	<div class="flex mt-16 flex-row flex-wrap h-full">
