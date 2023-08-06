@@ -24,7 +24,7 @@
 
 
 <div
-	class="w-full flex flex-col justify-center text-center items-center pt-6 pb-4 bg-primary-400 select-none"
+	class="w-full flex flex-col justify-center text-center items-center pt-6 pb-4 bg-primary-400 dark:bg-primary-600 select-none"
 >
 	<h1 class="h2 w-fit dark:text-black">Aktuelle Öffnungszeiten</h1>
 	<div class="flex flex-col items-start ">
