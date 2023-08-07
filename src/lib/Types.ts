@@ -6,7 +6,6 @@ export interface Partner {
 	id: string;
 	link: string;
 	logo: string;
-	logourl: string;
 	name: string;
 	updated: string;
 }
@@ -21,4 +20,16 @@ export interface Times {
 	to: string;
 	event: string;
 	event_description: string;
+}
+
+export interface News {
+	collectionId: string;
+	collectionName: string;
+	id: string;
+	created: string;
+	updated: string;
+	title: string;
+	description: string;
+	image: string;
+	display_date: string;
 }
