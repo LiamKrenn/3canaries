@@ -39,8 +39,9 @@
 		>Alle Öffnungszeiten<ChevronRight /></a
 	>
 </div>
-<div class="w-full pt-8 pb-6 justify-center text-center">
-	<h1 class="h1 font-bold ">more than a vinyl shop.</h1>
+<div class="w-full pt-16 pb-12 justify-center text-center">
+	<h1 class="h1 font-bold mb-6">Three Canaries Records.</h1>
+	<h1 class="h1 italic">- more than a vinyl shop -</h1>
 </div>
 
 
