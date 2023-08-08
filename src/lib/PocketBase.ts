@@ -3,6 +3,7 @@ import type { News, Times } from '$lib/Types';
 
 const domain: string = '127.0.0.1:8090';
 export const url: string = `http://${domain}/api/files`;
+export const newsPageCount: number = 6;
 const pb: PocketBase = new PocketBase(`http://${domain}`);
 
 export async function getTimesPerMonth(d: Date): Promise<Times[]> {
@@ -15,7 +16,7 @@ export async function getTimesPerMonth(d: Date): Promise<Times[]> {
 	return structuredClone(result.items);
 }
 
-export async function getNews(): Promise<News[]> {
-	const result: News[] = await pb.collection('news').getFullList<News>({ sort: '-display_date' });
+export async function getNews(page: number): Promise<News[]> {
+	const result: News[] = (await pb.collection('news').getList<News>(page, newsPageCount, { sort: '-display_date' })).items;
 	return structuredClone(result);
 }
