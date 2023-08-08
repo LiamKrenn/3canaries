@@ -1,12 +1,16 @@
+import { newsPageCount } from '$lib/PocketBase';
 import type { News } from '$lib/Types';
 import type { PageServerLoad } from './$types';
-import PocketBase, { Record } from 'pocketbase';
+import PocketBase, { ListResult, Record } from 'pocketbase';
 
 export const load = (async () => {
 	const pb: PocketBase = new PocketBase('http://127.0.0.1:8090');
-	const result: News[] = (await pb.collection('news').getList<News>(1, 3, { sort: '-display_date' })).items;
+	const result: ListResult<News> = await pb.collection('news').getList<News>(1, newsPageCount, { sort: '-display_date' });
+	const items: News[] = result.items
+	const totalPages: number = result.totalPages
 	
 	return {
-		news: structuredClone(result)
+		news: structuredClone(items),
+		totalPages: totalPages
 	};
 }) satisfies PageServerLoad;
