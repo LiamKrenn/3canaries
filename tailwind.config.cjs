@@ -15,6 +15,8 @@ module.exports = {
 			xs: '360px',
 			// => @media (min-width: 360px) { ... }
 		
+			'news-sm': '480px',
+
 			sm: '550px',
 			// => @media (min-width: 665px) { ... }
 
@@ -28,6 +30,8 @@ module.exports = {
 
 			xl: '1280px',
 			// => @media (min-width: 1280px) { ... }
+
+			'news': '1352px',
 
 			'2xl': '1536px',
 			// => @media (min-width: 1536px) { ... }
