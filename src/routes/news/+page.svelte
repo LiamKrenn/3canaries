@@ -20,7 +20,7 @@
 </script>
 
 <div class="w-full flex flex-col justify-center items-center mb-16">
-	<h1 class="h1 lg:mt-16 lg:mb-12 mb-5 mt-8 text-center select-none">News & Events</h1>
+	<h1 class="h1 lg:mt-16 lg:mb-8 mb-5 mt-8 text-center select-none">News & Events</h1>
 	<div class="flex w-full max-w-[130rem] justify-center flex-wrap">
 		{#each news as article}
 			<NewsElement {article} />
