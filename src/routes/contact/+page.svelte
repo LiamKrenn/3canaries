@@ -5,16 +5,16 @@ import type { PageData } from './$types';
 	export let data: PageData;
 </script>
 
-<div class="w-full h-full bg-secondary-500 dark:bg-secondary-400 text-surface-900 flex py-8 md:py-16 justify-center">
-	<div class=" 3xl:w-[50%] 2xl:w-[70%] xl:w-[80%] w-[90%] flex flex-col items-center">
+<div class="w-full h-full bg-secondary-500 dark:bg-secondary-600 text-surface-900 flex py-8 md:py-16 justify-center">
+	<div class=" 3xl:w-[50%] 2xl:w-[70%] xl:w-[80%] w-[90%] flex flex-col items-center relative">
 		<h1 class="h1 mb-6 md:mb-12">Kontakt</h1>
+		<div class=""></div>
 		<!-- svelte-ignore a11y-missing-attribute -->
 		<iframe
 			src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10873.510142870147!2d15.438877!3d47.052444!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476e4a9f9c88f7a7%3A0x8e49dd42251294b5!2sAm%20Langedelwehr%2034%2C%208010%20Graz%2C%20%C3%96sterreich!5e0!3m2!1sde!2sus!4v1691530339017!5m2!1sde!2sus"
 			width="100%"
 			height="70%"
 			style="border:0;"
-			allowfullscreen=""
 			loading="lazy"
 			referrerpolicy="no-referrer-when-downgrade"
 		/>
