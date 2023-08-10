@@ -8,16 +8,17 @@
 	const to: string = time.to.slice(11, 16);
 	const weekday: string = date.toLocaleDateString('de-DE', { weekday: 'long' });
 	const longdate: string = date.toLocaleDateString('de-DE', { day: 'numeric' });
-	const fromtext: string = date.toLocaleDateString('de-DE', { hour: 'numeric' });
+  const desc: boolean = time.event_description != ''
 </script>
 
-<div class="w-full border-b-2 border-surface-800 flex py-1.5 bg-primary-300">
-  <div class="border-r-[1px] border-surface-800 shrink-0 w-[20rem] p-3 pb-1.5">
-    <h2 class="h2 font-bold">{longdate}., {weekday}</h2>
-    <h3 class="h3 mt-2">{from}-{to}</h3>
+<div class="card flex lg:flex-row flex-col w-[80%] variant-ghost-primary m-1 rounded-lg cursor-default card-hover py-2 dark:text-surface-50 ">
+  <div class="shrink-0 lg:w-[20rem] w-full pt-3 pl-4 pb-1.5 pr-2 ">
+    <h2 class="h2 font-bold break-words">{longdate}., {weekday}</h2>
+    <h3 class="h3 mt-3 ">{from}-{to}</h3>
   </div>
-  <div class="ml-3 flex flex-col justify-between ">
-    <p class="text-3xl mt-2">{time.event}</p>
-    <p class="text-xl mb-2">{time.event_description}</p>
+  <div class="lg:border-r-[1px] lg:border-b-0 {desc ? 'border-b-[1px]' : 'hidden'} mx-3 lg:mx-0 border-surface-500 mt-0.5 lg:mt-0 "/>
+  <div class="ml-4 flex flex-col justify-between pr-2 break-words {desc ? '' : 'hidden'} ">
+    <p class="md:text-3xl text-2xl mt-2">{time.event}</p>
+    <p class="md:text-xl text-lg mt-1.5 mb-2 ">{time.event_description}</p>
   </div>
 </div>
