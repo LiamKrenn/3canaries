@@ -11,7 +11,7 @@
 </script>
 
 <div
-	class="card dark:bg-surface-800 w-[40rem] news:max-h-[25rem] news-sm:max-h-[40rem] max-h-[29rem] mx-4 variant-ghost-surface rounded-lg my-2 md:my-4 flex flex-col relative"
+	class="card dark:bg-surface-800 news:max-w-[40rem] news:min-w-[40rem] min-w-[90%] max-w-[90%] lg:max-h-[45rem] news-sm:max-h-[40rem] max-h-[29rem] mx-4 variant-ghost-surface rounded-lg my-2 md:my-4 flex flex-col relative cursor-default"
 >
 	<div
 		class="absolute bottom-0.5 mx-1 inset-x-0 h-7 bg-gradient-to-b from-transparent rounded-b-lg to-surface-100 via-surface-100/80 dark:via-surface-800/80 dark:to-surface-800"
