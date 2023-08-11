@@ -1,5 +1,5 @@
 import { domain, getTimesPerMonth } from '$lib/PocketBase';
-import type { PageServerLoad } from './$types';
+import type { PageServerLoad } from './../$types';
 import PocketBase, { ListResult } from 'pocketbase';
 import type { Times } from '$lib/Types';
 
