@@ -4,6 +4,7 @@
 	import Carousel from '$lib/components/Carousel.svelte';
 	import Carousel2 from '$lib/components/Carousel2.svelte';
 	import ChevronRight from '$lib/icons/chevron-right.svelte';
+	import Info from '$lib/icons/info.svelte';
 	import type { PageData } from './$types';
 	export let data: PageData;
 
@@ -23,6 +24,8 @@
 	<title>3Canaries | Home</title>
 	<meta name="description" content='more than a vinyl shop. Es ist nicht nur ein "Geschäft" - es ist ein Lebensgefühl. Ein Ort, bei dem Zeit keine Rolle spielt. Ein Ort der Leidenschaft & Hingabe zur Kunst Musik. "More than an Vinyl Shop" eben. Aus purer Überzeugung.. Schau vorbei und genieße Platten, Musik, interessante Gespräche und eine chillige Atmosphäre.' />
 </svelte:head>
+
+<div class="h-min w-full bg-secondary-500 text-black flex"><span class="scale-75"><Info/></span>Diese Website wird derzeit noch aktiv entwickelt. Wir bitten um Nachsicht, falls Ladezeiten etwas länger dauern!</div>
 
 <Carousel />
 
