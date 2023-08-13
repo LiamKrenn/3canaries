@@ -10,6 +10,6 @@
 	const monthYearText = data.monthYearText;
 </script>
 
-<div class="h-[100%] w-full text-surface-900">
+<div class="h-full w-full text-surface-900">
 	<Calendar {times} {maxmonth} {maxyear} {monthYearText} />
 </div>
