@@ -37,10 +37,6 @@ export const footerItems = [
     link: '/cookies'
   },
   {
-    title: 'Lieferbedingungen',
-    link: '/delivery-terms'
-  },
-  {
     title: 'Widerrufsbelehrung',
     link: '/right-of-withdrawal'
   },
