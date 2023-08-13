@@ -2,6 +2,7 @@
 
 <script lang="ts">
 	import Carousel from '$lib/components/Carousel.svelte';
+	import Carousel2 from '$lib/components/Carousel2.svelte';
 	import ChevronRight from '$lib/icons/chevron-right.svelte';
 	import type { PageData } from './$types';
 	export let data: PageData;
@@ -35,22 +36,22 @@
 	</div>
 	<a
 		href="/open-times"
-		class="text-xl pb-4 px-4 pt-4 mt-2 underline flex items-center cursor-pointer dark:text-black"
+		class="text-xl pb-4 px-4 pt-4 mt-2 underline flex items-center cursor-pointer dark:text-black stroke-black"
 		>Alle Öffnungszeiten<ChevronRight /></a
 	>
 </div>
-<div class="w-full pt-16 pb-12 justify-center text-center">
+<div class="w-full pt-16 pb-12 justify-center text-center cursor-default">
 	<h1 class="h1 font-bold mb-6">Three Canaries Records.</h1>
 	<h1 class="h1 italic">- more than a vinyl shop -</h1>
 </div>
 
 
-<div class="w-full flex flex-row flex-wrap py-2 justify-center items-start ">
-	<div class="card w-[40vw] h-max-[30rem] mx-4 my-2 rounded-lg variant-filled-secondary">
+<div class="w-full flex lg:flex-row flex-col lg:flex-wrap py-2 justify-center lg:items-start items-center cursor-default mb-8">
+	<div class="card lg:w-[40vw] w-[90%] h-max-[30rem] mx-4 my-2 rounded-lg variant-filled-secondary">
 		<header>
-			<img class=" w-[40vw] rounded-lg shrink-0 " src="images/meinladen.webp" />
+			<img class="w-full rounded-lg shrink-0 " src="images/meinladen.webp" />
 		</header>
-		<div class="p-6">
+		<div class="md:p-6 p-4">
 			<h3 class="h3 mb-2">Mein Laden.</h3>
 			<p class="whitespace-break-spaces">
 				Mein Plattenladen in Graz (Steiermark) ist nicht nur "Geschäft" - es ist Lebensgefühl. Ein Ort, bei dem Zeit keine Rolle spielt. Ein Ort der Leidenschaft & Hingabe zur Kunst Musik. "More than an Vinyl Shop" eben. Aus purer Überzeugung...
@@ -59,11 +60,11 @@
 	</div>
 
 
-	<div class="card w-[40vw] mx-4 my-2 rounded-lg variant-filled-secondary">
+	<div class="card lg:w-[40vw] w-[90%] mx-4 my-2 rounded-lg variant-filled-secondary">
 		<header>
-			<img class=" w-[40vw]  rounded-lg shrink-0" src="images/meinplatten.webp" />
+			<img class="w-full rounded-lg shrink-0" src="images/meinplatten.webp" />
 		</header>
-		<div class="p-6">
+		<div class="md:p-6 p-4">
 			<h3 class="h3 mb-2">Meine Platten.</h3>
 			<p class="whitespace-break-spaces">
 				Im Laufe der Zeit sammelten sich die Werke. Ohne Druck, ohne Stress. Die nunmehr exklusive Vinyl-Kollektion beinhaltet seltenste Ausgaben und echte Schmuckstücke. Wenn es nach meinem Geschmack geht, versteht sich. Vielleicht findest du hier genau deine Platte...
@@ -71,3 +72,6 @@
 		</div>
 	</div>
 </div>
+
+
+<Carousel2/>
