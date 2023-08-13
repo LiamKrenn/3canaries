@@ -3,9 +3,9 @@ import type { News, Times } from '$lib/Types';
 
 const localdev: boolean = false;
 export const domain: string = localdev ? '127.0.0.1:8090' : '3c.krenn.tech:443';
-export const url: string = `http://${domain}/api/files`;
+export const url: string = `https://${domain}/api/files`;
 export const newsPageCount: number = 6;
-const pb: PocketBase = new PocketBase(`http://${domain}`);
+const pb: PocketBase = new PocketBase(`https://${domain}`);
 
 export async function getTimesPerMonth(d: Date): Promise<Times[]> {
 	const monthEnd = new Date(d.getFullYear(), d.getMonth() + 1, 1).toJSON().slice(0, 10);
