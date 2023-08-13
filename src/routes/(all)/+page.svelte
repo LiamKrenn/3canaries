@@ -54,7 +54,7 @@
 <div class="w-full flex lg:flex-row flex-col lg:flex-wrap py-2 justify-center lg:items-start items-center cursor-default mb-8">
 	<div class="card lg:w-[40vw] w-[90%] h-max-[30rem] mx-4 my-2 rounded-lg variant-filled-secondary">
 		<header>
-			<img class="w-full rounded-lg shrink-0 " src="images/meinladen.webp" />
+			<img class="w-full rounded-lg shrink-0 " src="images/meinladen.webp" alt="Laden Eingang" height="1080px" width="1440px"/>
 		</header>
 		<div class="md:p-6 p-4">
 			<h3 class="h3 mb-2">Mein Laden.</h3>
@@ -67,7 +67,7 @@
 
 	<div class="card lg:w-[40vw] w-[90%] mx-4 my-2 rounded-lg variant-filled-secondary">
 		<header>
-			<img class="w-full rounded-lg shrink-0" src="images/meinplatten.webp" />
+			<img class="w-full rounded-lg shrink-0" src="images/meinplatten.webp" alt="Platten aufgestellt" height="1080px" width="1440px"/>
 		</header>
 		<div class="md:p-6 p-4">
 			<h3 class="h3 mb-2">Meine Platten.</h3>

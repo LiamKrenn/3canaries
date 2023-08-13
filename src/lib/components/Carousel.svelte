@@ -52,7 +52,7 @@
 					class="min-w-full h-[50vh] object-cover brightness-[.4]"
 					src="images/{image}.webp"
 					alt={image}
-					loading="lazy"
+					loading="eager"
 					height="2560px"
 					width="1707px"
 				/>
