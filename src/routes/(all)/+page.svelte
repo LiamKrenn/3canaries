@@ -15,7 +15,6 @@
 			month: 'long'
 		};
 		const formattedDate = d.toLocaleDateString('de-DE', options);
-		console.log(formattedDate);
 		return formattedDate;
 	}
 </script>
