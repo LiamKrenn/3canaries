@@ -1,9 +1,6 @@
 <script lang="ts">
 	import { AppBar, AppShell, Drawer, LightSwitch } from '@skeletonlabs/skeleton';
-	import SideNav from '$lib/components/SideNav.svelte';
-	import NavItem from '$lib/components/NavItem.svelte';
 	import NavBar from '$lib/components/NavBar.svelte';
-	import { items } from '$lib/NavItems';
 	import Footer from '$lib/components/Footer.svelte';
 	
 </script>
