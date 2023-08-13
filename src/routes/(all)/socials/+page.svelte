@@ -31,3 +31,7 @@
     
 </div>
 
+<svelte:head>
+	<title>3Canaries | Social Media</title>
+	<meta name="description" content='Alle Social Media Accounts vom Grazer Plattenladen "Three Canaries Records"' />
+</svelte:head>

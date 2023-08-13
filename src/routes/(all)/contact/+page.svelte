@@ -5,6 +5,11 @@ import type { PageData } from './$types';
 	export let data: PageData;
 </script>
 
+<svelte:head>
+	<title>3Canaries | Kontakt</title>
+	<meta name="description" content="Adresse, Telefon und E-Mail von Three Canaries records." />
+</svelte:head>
+
 <div class="w-full h-full bg-secondary-500 dark:bg-secondary-600 text-surface-900 flex py-8 md:py-16 justify-center">
 	<div class=" 3xl:w-[50%] 2xl:w-[70%] xl:w-[80%] w-[90%] h-[85vh] flex flex-col items-center relative">
 		<h1 class="h1 mb-6 md:mb-12 cursor-default">Kontakt</h1>

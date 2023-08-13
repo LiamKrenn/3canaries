@@ -7,6 +7,11 @@
 	export let data: PageData;
 </script>
 
+<svelte:head>
+	<title>3Canaries | Partner</title>
+	<meta name="description" content='Alle Partner von "Three Canaries Records".' />
+</svelte:head>
+
 <div
 	class="py-20 w-full flex flex-col justify-center items-center bg-secondary-500 dark:bg-secondary-600 dark:text-surface-900 cursor-default"
 >
