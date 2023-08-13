@@ -117,6 +117,11 @@
 			target="_blank"
 			rel="noreferrer"
 			class="underline text-blue-500">Vercel Datenschutzerklärung</a
-		>.<br /><br />
+		> und <a
+		href="https://vercel.com/docs/concepts/analytics/privacy-policy"
+		target="_blank"
+		rel="noreferrer"
+		class="underline text-blue-500">Vercel Analytics Privacy and Compliance</a
+	>.<br /><br />
 	</p>
 </div>
