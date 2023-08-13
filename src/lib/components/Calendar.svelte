@@ -20,7 +20,7 @@
 	let minlim: boolean = true;
 	let maxlim: boolean = min.getFullYear() == maxyear && min.getMonth() == maxmonth;
 	const disabledStyle: string = 'invisible';
-	const enabledStyle: string = 'cursor-pointer card-hover bg-surface-200 dark:bg-surface-600';
+	const enabledStyle: string = 'cursor-pointer card-hover bg-surface-200 dark:bg-surface-600 stroke-black';
 	let show_info: boolean = false;
 
 	function increaseMonth() {
@@ -55,17 +55,17 @@
 
 {#if show_info}
 	<div class="w-full bg-primary-500 p-2 flex items-center justify-between">
-		<p class="cursor-default md:text-base text-sm first-letter:ml-7 relative">
-			<span class="h-6 w-6 absolute md:scale-100 scale-75 md:mt-0 -mt-0.5"><Info /></span><span
+		<p class="cursor-default md:text-base text-sm md:first-letter:ml-7 first-letter:ml-6 relative mr-0.5">
+			<span class="h-6 w-6 absolute md:scale-100 scale-75 md:mt-0 -mt-0.5 -ml-0.5"><Info /></span><span
 				class="italic font-bold">We're open, when we're open</span
-			>. Zeiten könnten sich ändern! <a class="underline cursor-pointer">Folge uns für Updates!</a>
+			>. Die Zeiten sind aktuell, aber könnten sich ändern! <a href="/socials" class="underline cursor-pointer">Folge uns für Updates!</a>
 		</p>
 		<button
 			on:click={closeInfo}
 			class="sm:flex hidden w-min 2xl:w-52 btn bg-surface-50-900-token dark:text-surface-50 h-8 hover:scale-105 duration-150 md:text-base text-sm"
 			>Verstanden!</button
 		>
-		<button on:click={closeInfo} class="sm:hidden h-full -mr-4 w-min flex items-center scale-50">
+		<button on:click={closeInfo} class="sm:hidden h-full -mr-[18px] w-min flex items-center scale-50">
 			<CloseIcon />
 		</button>
 	</div>
