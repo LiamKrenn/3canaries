@@ -4,7 +4,7 @@ import type { PageServerLoad } from './$types';
 import PocketBase, { Record } from 'pocketbase';
 
 export const load = (async () => {
-	const pb: PocketBase = new PocketBase(`http://${domain}`);
+	const pb: PocketBase = new PocketBase(`https://${domain}`);
 	const result: Partner[] = await pb.collection('partner').getFullList<Partner>();
 	const p: Partner[] = structuredClone(result);
 

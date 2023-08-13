@@ -4,7 +4,7 @@ import PocketBase, { ListResult } from 'pocketbase';
 import type { Times } from '$lib/Types';
 
 export const load = (async () => {
-	const pb: PocketBase = new PocketBase(`http://${domain}`);
+	const pb: PocketBase = new PocketBase(`https://${domain}`);
 	const res = getTimesPerMonth(new Date());
 	const record = (await pb.collection('times').getList(1,1,{sort: '-from'})).items[0]
 	const maxlim: Date = new Date(record.from)
