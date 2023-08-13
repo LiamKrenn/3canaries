@@ -20,10 +20,12 @@ module.exports = {
 			sm: '550px',
 			// => @media (min-width: 665px) { ... }
 
-			tc: '655px',
+			tc: '600px',
 
 			md: '768px',
 			// => @media (min-width: 768px) { ... }
+
+			ml: '900px',
 
 			lg: '1024px',
 			// => @media (min-width: 1024px) { ... }
