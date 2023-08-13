@@ -25,7 +25,7 @@
 	<meta name="description" content='more than a vinyl shop. Es ist nicht nur ein "Geschäft" - es ist ein Lebensgefühl. Ein Ort, bei dem Zeit keine Rolle spielt. Ein Ort der Leidenschaft & Hingabe zur Kunst Musik. "More than an Vinyl Shop" eben. Aus purer Überzeugung.. Schau vorbei und genieße Platten, Musik, interessante Gespräche und eine chillige Atmosphäre.' />
 </svelte:head>
 
-<div class="h-min w-full bg-secondary-500 text-black flex text-xs"><span class="scale-50 -ml-1 -my-1"><Info/></span>Diese Website wird aktiv entwickelt. Wir bitten um Nachsicht, falls Ladezeiten etwas länger dauern!</div>
+<div class="h-min w-full bg-secondary-500 text-black flex text-xs"><span class="scale-50 -m-1"><Info/></span>Diese Website wird aktiv entwickelt. Wir bitten um Nachsicht, falls Ladezeiten etwas länger dauern!</div>
 
 <Carousel />
 
