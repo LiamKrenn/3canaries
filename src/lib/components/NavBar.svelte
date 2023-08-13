@@ -30,7 +30,7 @@
 		</div>
 		<a class="xl:mr-2.5" href="https://www.discogs.com/user/sckrenn/collection" target="_blank" rel="noreferrer">
 			<button class="xs:flex hidden btn variant-ghost-primary h-12 hover:brightness-75 select-none">
-				My Collection
+				Discogs
 			</button>
 		</a>
 		<div class="xl:flex hidden mr-1.5"><Socials /></div>
