@@ -33,16 +33,8 @@ export const footerItems = [
     link: '/data-protection'
   },
   {
-    title: 'Cookie-Einstellungen',
+    title: 'Cookie-Richtlinien',
     link: '/cookies'
   },
-  {
-    title: 'Widerrufsbelehrung',
-    link: '/right-of-withdrawal'
-  },
-  {
-    title: 'AGB',
-    link: '/conditions'
-  }
 ];
 
