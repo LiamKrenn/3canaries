@@ -1,8 +1,8 @@
 import PocketBase, { ListResult } from 'pocketbase';
 import type { News, Times } from '$lib/Types';
 
-const localdev: boolean = true;
-export const domain: string = localdev ? '127.0.0.1:8090' : '128.140.36.53:3334';
+const localdev: boolean = false;
+export const domain: string = localdev ? '127.0.0.1:8090' : '128.140.36.53:443';
 export const url: string = `http://${domain}/api/files`;
 export const newsPageCount: number = 6;
 const pb: PocketBase = new PocketBase(`http://${domain}`);
