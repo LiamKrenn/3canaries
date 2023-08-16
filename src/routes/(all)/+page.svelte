@@ -31,7 +31,7 @@
 	<title>3Canaries | Home</title>
 	<meta
 		name="description"
-		content='more than a vinyl shop. Es ist nicht nur ein "Geschäft" - es ist ein Lebensgefühl. Ein Ort, bei dem Zeit keine Rolle spielt. Ein Ort der Leidenschaft & Hingabe zur Kunst Musik. "More than an Vinyl Shop" eben. Aus purer Überzeugung.. Schau vorbei und genieße Platten, Musik, interessante Gespräche und eine chillige Atmosphäre.'
+		content="more than a vinyl shop. Es ist nicht nur ein 'Geschäft' - es ist ein Lebensgefühl. Ein Ort, bei dem Zeit keine Rolle spielt. Ein Ort der Leidenschaft & Hingabe zur Kunst Musik. 'More than an Vinyl Shop' eben. Aus purer Überzeugung.. Schau vorbei und genieße Platten, Musik, interessante Gespräche und eine chillige Atmosphäre."
 	/>
 </svelte:head>
 
@@ -48,8 +48,10 @@
 	<h1 class="h2 w-fit dark:text-black">Aktuelle Öffnungszeiten</h1>
 	<div class="flex flex-col items-start">
 		{#each data.times as time}
-			<p class=" dark:text-black text-2xl mt-4 whitespace-nowrap flex items-center">
-				{shortDate(time.from)}<span class="text-xl font-thin ml-2.5 text-right">{fromToText(time)}</span>
+			<p class=" dark:text-black text-2xl mt-4 whitespace-nowrap flex items-center justify-between w-full">
+				{shortDate(time.from)}
+				<span class="text-xl font-thin ml-2.5 text-right">{fromToText(time)}</span
+				>
 			</p>
 			<p class="text-2xl dark:text-black font-thin">{time.event}</p>
 		{/each}
