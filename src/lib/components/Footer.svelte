@@ -4,10 +4,10 @@
 
 </script>
 <div class="w-full flex justify-center p-2  mt-8 select-none">
-	<img class="w-80 " src="images/C_TC_text_cut.webp"/>
+	<img class="w-80 " src="images/C_TC_text_cut_mq.webp" alt="Three Canaries" width="500px" height="65px"/>
 </div>
 <div class="w-full flex justify-center px-2 pb-4 select-none">
-	<img class="w-60 " src="images/R_text_cut.webp"/>
+	<img class="w-60 " src="images/R_text_cut_mq.webp" alt="records." height="110px" width="500px"/>
 </div>
 <div class="p-2 mb-2 flex flex-row flex-wrap justify-center">
   {#each footerItems as item}

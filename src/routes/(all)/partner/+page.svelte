@@ -5,11 +5,16 @@
 	import { modeCurrent } from '@skeletonlabs/skeleton';
 	import { url } from '$lib/PocketBase';
 	export let data: PageData;
+
+	let mount = false;
+	onMount(() => {
+		mount = true;
+	});
 </script>
 
 <svelte:head>
 	<title>3Canaries | Partner</title>
-	<meta name="description" content='Alle Partner von "Three Canaries Records".' />
+	<meta name="description" content={`Alle Partner von "Three Canaries Records".`} />
 </svelte:head>
 
 <div
@@ -18,8 +23,25 @@
 	<h1 class="h1">Unsere Partner...</h1>
 	<div class="flex mt-16 flex-row flex-wrap h-full justify-center">
 		{#each data.partners as partner}
-			<div class="mx-4 shrink-0 h-full mb-8">
-				<img class="h-[330px]" src={`${url}/${partner.collectionId}/${partner.id}/${partner.logo}`} alt={`${partner.name} Logo`} />
+			<div class="mx-4 shrink-0 h-full mb-8 relative">
+				<img
+					class="h-[330px] w-[330px]"
+					src={`${url}/${partner.collectionId}/${partner.id}/${partner.logo_lq}`}
+					alt={`${partner.name} Logo`}
+					width="100px"
+					height="100px"
+					loading="eager"
+				/>
+				{#if mount}
+				<img
+					class="h-[330px] w-[330px] absolute top-0"
+					src={`${url}/${partner.collectionId}/${partner.id}/${partner.logo}`}
+					alt={`${partner.name} Logo`}
+					width="330px"
+					height="330px"
+					loading="eager"
+				/>
+				{/if}
 				<h1 class="text-3xl mt-6 h1">{@html partner.name}</h1>
 				<p class="text-xl mt-4 w-[330px]">{partner.description}</p>
 				<a

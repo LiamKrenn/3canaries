@@ -1,7 +1,8 @@
 <script lang="ts">
 	import ChevronLeft from '$lib/icons/chevron-left.svelte';
 	import ChevronRight from '$lib/icons/chevron-right.svelte';
-	const images = ['scnd1hq', 'scnd2hq', 'scnd3hq', 'scnd4hq'];
+	import { onMount } from 'svelte';
+	const images = ['scnd1', 'scnd2', 'scnd3', 'scnd4'];
 
 	let elemCarousel: HTMLDivElement;
 	let counter: number = 0;
@@ -22,6 +23,9 @@
 		elemCarousel.scrollTo(counter * elemCarousel.clientWidth, 0);
 		elemCarousel.style.scrollBehavior = 'smooth';
 	}
+
+	let mount = false
+	onMount(() => { mount = true; })
 </script>
 
 <svelte:window on:resize={resize} />
@@ -31,13 +35,23 @@
 		{#each images as image}
 			<div class="min-w-full h-[50vh] flex items-center justify-center relative">
 				<img
-					class="min-w-full h-[50vh] object-cover "
-					src="images/{image}.webp"
+					class="min-w-full h-[50vh] object-cover absolute blur-sm"
+					src="images/{image}lq.webp"
 					alt={image}
-					loading="lazy"
+					loading="eager"
+					height="256px"
+					width="171px"
+				/>
+				{#if mount}
+				<img
+					class="min-w-full h-[50vh] object-cover absolute"
+					src="images/{image}hq.webp"
+					alt={image}
+					loading="eager"
 					height="2560px"
 					width="1707px"
 				/>
+				{/if}
 			</div>
 		{/each}
 	</div>
