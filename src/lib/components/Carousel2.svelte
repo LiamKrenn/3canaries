@@ -45,11 +45,11 @@
 				{#if mount}
 				<img
 					class="min-w-full h-[50vh] object-cover absolute"
-					src="images/{image}hq.webp"
+					src="images/{image}mq.webp"
 					alt={image}
 					loading="eager"
-					height="2560px"
-					width="1707px"
+					height="1440px"
+					width="960px"
 				/>
 				{/if}
 			</div>

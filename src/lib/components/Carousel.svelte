@@ -63,12 +63,12 @@
 				/>
 				{#if mount}
 				<img
-					class="absolute top-0 min-w-full h-[50vh] object-cover brightness-[.4]"
-					src="images/{image}hq.webp"
+					class="absolute top-0 min-w-full h-[50vh] object-cover brightness-[.4] blur-[1px]"
+					src="images/{image}mq.webp"
 					alt={image}
 					loading="eager"
-					height="2560px"
-					width="1707px"
+					height="1080px"
+					width="720px"
 				/>
 				{/if}				
 				<div
