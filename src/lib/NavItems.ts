@@ -1,6 +1,6 @@
 export type Item = { title: string; link: string };
 
-export const items = [
+export const items: Item[] = [
   {
     title: 'Vinyl & more',
     link: '/'
