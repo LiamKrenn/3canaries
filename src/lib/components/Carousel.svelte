@@ -1,18 +1,19 @@
 <script lang="ts">
 	import ChevronLeft from '$lib/icons/chevron-left.svelte';
 	import ChevronRight from '$lib/icons/chevron-right.svelte';
-	const images = ['title1hq', 'title2hq', 'title3hq'];
+	import { onMount } from 'svelte';
+	const images = ['title1', 'title2', 'title3'];
 	const content: { [key: string]: { title: string; content: string; }; } = {
-		'title1hq': {
+		'title1': {
 			title: 'Three Canaries Records',
 			content: '-  more than a vinyl shop  -'
 		},
-		'title2hq': {
+		'title2': {
 			title: 'Discogs',
 			content:
 				'Meine komplette "Vinylographie" findest du auf der Online-Plattform Discogs, bei der auch einfach & bequem Bestellungen möglich sind!'
 		},
-		'title3hq': {
+		'title3': {
 			title: 'Oldschool-Plattenladen',
 			content: `Besuch uns einfach in unserem Plattenladen "Three Canaries" in Graz! It's more than a Vinyl Shop. #seeyouthere`
 		}
@@ -37,6 +38,9 @@
 		elemCarousel.scrollTo(counter * elemCarousel.clientWidth, 0);
 		elemCarousel.style.scrollBehavior = 'smooth';
 	}
+
+	onMount(() => {console.log("mount");
+	})
 </script>
 
 <svelte:window on:resize={resize} />
@@ -49,10 +53,18 @@
 		{#each images as image}
 			<div class="min-w-full h-[50vh] flex items-center justify-center my-[-7vh] relative">
 				<img
-					class="min-w-full h-[50vh] object-cover brightness-[.4]"
-					src="images/{image}.webp"
+					class="absolute top-0 min-w-full h-[50vh] object-cover brightness-[.4]"
+					src="images/{image}lq.webp"
 					alt={image}
 					loading="eager"
+					height="256px"
+					width="171px"
+				/>
+				<img
+					class="absolute top-0 min-w-full h-[50vh] object-cover brightness-[.4]"
+					src="images/{image}hq.webp"
+					alt={image}
+					loading="lazy"
 					height="2560px"
 					width="1707px"
 				/>

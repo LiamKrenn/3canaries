@@ -1,7 +1,7 @@
 <script lang="ts">
 	import ChevronLeft from '$lib/icons/chevron-left.svelte';
 	import ChevronRight from '$lib/icons/chevron-right.svelte';
-	const images = ['scnd1hq', 'scnd2hq', 'scnd3hq', 'scnd4hq'];
+	const images = ['scnd1', 'scnd2', 'scnd3', 'scnd4'];
 
 	let elemCarousel: HTMLDivElement;
 	let counter: number = 0;
@@ -31,8 +31,16 @@
 		{#each images as image}
 			<div class="min-w-full h-[50vh] flex items-center justify-center relative">
 				<img
-					class="min-w-full h-[50vh] object-cover "
-					src="images/{image}.webp"
+					class="min-w-full h-[50vh] object-cover absolute"
+					src="images/{image}lq.webp"
+					alt={image}
+					loading="eager"
+					height="256px"
+					width="171px"
+				/>
+				<img
+					class="min-w-full h-[50vh] object-cover absolute"
+					src="images/{image}hq.webp"
 					alt={image}
 					loading="lazy"
 					height="2560px"

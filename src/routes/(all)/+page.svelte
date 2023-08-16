@@ -72,14 +72,26 @@
 	class="w-full flex lg:flex-row flex-col lg:flex-wrap py-2 justify-center lg:items-start items-center cursor-default mb-8"
 >
 	<div class="card lg:w-[40vw] w-[90%] h-max-[30rem] mx-4 my-2 rounded-lg variant-filled-secondary">
-		<header>
+		<header class="relative">
+			
 			<img
-				class="w-full rounded-lg shrink-0"
-				src="images/meinladen.webp"
+				class="w-full rounded-lg shrink-0 h-auto absolute"
+				src="images/meinladenlq.webp"
 				alt="Laden Eingang"
 				height="1080px"
 				width="1440px"
+				loading="eager"
 			/>
+			<img
+				class="w-full rounded-lg shrink-0 h-auto relative"
+				src="images/meinladenhq.webp"
+				alt="Laden Eingang"
+				height="1080px"
+				width="1440px"
+				loading="lazy"
+			/>
+			
+			
 		</header>
 		<div class="md:p-6 p-4">
 			<h3 class="h3 mb-2">Mein Laden.</h3>
@@ -90,20 +102,28 @@
 	</div>
 
 	<div class="card lg:w-[40vw] w-[90%] mx-4 my-2 rounded-lg variant-filled-secondary">
-		<header>
+		<header class="relative">
 			<img
-				class="w-full rounded-lg shrink-0"
-				src="images/meinplatten.webp"
-				alt="Platten aufgestellt"
+				class="w-full rounded-lg shrink-0 h-auto absolute"
+				src="images/meinplattenlq.webp"
+				alt="Laden Eingang"
 				height="1080px"
 				width="1440px"
+				loading="eager"
+			/>
+			<img
+				class="w-full rounded-lg shrink-0 h-auto relative"
+				src="images/meinplattenhq.webp"
+				alt="Laden Eingang"
+				height="1080px"
+				width="1440px"
+				loading="lazy"
 			/>
 		</header>
 		<div class="md:p-6 p-4">
 			<h3 class="h3 mb-2">Meine Platten.</h3>
 			<p class="whitespace-break-spaces">
 				{`Im Laufe der Zeit sammelten sich die Werke. Ohne Druck, ohne Stress. Die nunmehr exklusive Vinyl-Kollektion beinhaltet seltenste Ausgaben und echte Schmuckstücke. Wenn es nach meinem Geschmack geht, versteht sich. Vielleicht findest du hier genau deine Platte...`}
-				
 			</p>
 		</div>
 	</div>
