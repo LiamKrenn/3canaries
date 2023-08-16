@@ -6,6 +6,7 @@
 	import Carousel2 from '$lib/components/Carousel2.svelte';
 	import ChevronRight from '$lib/icons/chevron-right.svelte';
 	import Info from '$lib/icons/info.svelte';
+	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
 	export let data: PageData;
 
@@ -25,6 +26,9 @@
 		const to: string = time.to.slice(11, 16);
 		return from + '-' + to;
 	}
+
+	let mount = false
+	onMount(() => { mount = true; })
 </script>
 
 <svelte:head>
@@ -75,22 +79,23 @@
 		<header class="relative">
 			
 			<img
-				class="w-full rounded-lg shrink-0 h-auto absolute"
+				class="w-full rounded-lg shrink-0 h-auto"
 				src="images/meinladenlq.webp"
+				alt="Laden Eingang"
+				height="108px"
+				width="144px"
+				loading="eager"
+			/>
+			{#if mount}
+			<img
+				class="w-full rounded-lg shrink-0 h-auto absolute top-0"
+				src="images/meinladenhq.webp"
 				alt="Laden Eingang"
 				height="1080px"
 				width="1440px"
 				loading="eager"
 			/>
-			<img
-				class="w-full rounded-lg shrink-0 h-auto relative"
-				src="images/meinladenhq.webp"
-				alt="Laden Eingang"
-				height="1080px"
-				width="1440px"
-				loading="lazy"
-			/>
-			
+			{/if}
 			
 		</header>
 		<div class="md:p-6 p-4">
@@ -104,21 +109,23 @@
 	<div class="card lg:w-[40vw] w-[90%] mx-4 my-2 rounded-lg variant-filled-secondary">
 		<header class="relative">
 			<img
-				class="w-full rounded-lg shrink-0 h-auto absolute"
+				class="w-full rounded-lg shrink-0 h-auto"
 				src="images/meinplattenlq.webp"
 				alt="Laden Eingang"
-				height="1080px"
-				width="1440px"
+				height="108px"
+				width="144px"
 				loading="eager"
 			/>
+			{#if mount}
 			<img
-				class="w-full rounded-lg shrink-0 h-auto relative"
+				class="w-full rounded-lg shrink-0 h-auto absolute top-0"
 				src="images/meinplattenhq.webp"
 				alt="Laden Eingang"
 				height="1080px"
 				width="1440px"
 				loading="lazy"
 			/>
+			{/if}
 		</header>
 		<div class="md:p-6 p-4">
 			<h3 class="h3 mb-2">Meine Platten.</h3>

@@ -53,7 +53,7 @@
 			</div>
 		</div>
 		<div class="flex justify-center xs:w-[220px] w-full mb-4 flex-shrink">
-			<img class="select-none xs:w-[180px] w-[120px]" src="images/C_TCR_Transp_cut.webp" alt="3 Canaries Logo" />
+			<img class="select-none xs:w-[180px] w-[120px]" src="images/C_TCR_Transp_cut.webp" alt="3 Canaries Logo" width="200px" height="209px"/>
 		</div>
 	</div>
 </Drawer>

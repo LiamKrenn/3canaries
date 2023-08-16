@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { url } from '$lib/PocketBase';
 	import type { News } from '$lib/Types';
+	import { onMount } from 'svelte';
 
 	export let article: News;
 
@@ -8,6 +9,9 @@
 		dateStyle: 'short'
 	});
 	const image: boolean = article.image != '';
+
+	let mount = false
+	onMount(() => { mount = true; })
 </script>
 
 <div
@@ -16,15 +20,27 @@
 	<div
 		class="absolute bottom-0.5 mx-1 inset-x-0 h-7 bg-gradient-to-b from-transparent rounded-b-lg to-surface-100 via-surface-100/80 dark:via-surface-800/80 dark:to-surface-800"
 	/>
-	<div class="overflow-y-auto hide-scrollbar rounded-t-lg mb-1">
+	<div class="overflow-y-auto hide-scrollbar rounded-t-lg mb-1 relative">
 		{#if image}
+			
 			<img
-				class="h-min brightness-75 select-none"
-				src={`${url}/${article.collectionId}/${article.id}/${article.image}`}
+				class="w-full h-auto brightness-75 select-none rounded-t-lg "
+				src={`${url}/${article.collectionId}/${article.id}/${article.image_lq}`}
 				alt={`Foto von ${article.title}`}
-				width="2560px"
-				height="853px"
+				width="192px"
+				height="64px"
+				loading="eager"
 			/>
+			{#if mount}
+				<img
+					class="w-full h-auto brightness-75 select-none rounded-t-lg absolute top-0"
+					src={`${url}/${article.collectionId}/${article.id}/${article.image}`}
+					alt={`Foto von ${article.title}`}
+					width="920px"
+					height="320px"
+					loading="eager"
+				/>
+			{/if}
 		{/if}
 
 		<div class="flex relative justify-stretch">

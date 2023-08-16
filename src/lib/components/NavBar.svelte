@@ -12,14 +12,15 @@
 		<a class=" lg:w-fit lg:items-center mx-2 justify-center flex-shrink-0" href="/">
 			<img
 				class="w-20 p-0.5 hover:scale-105 duration-150 select-none"
-				src="images/C_TCR_notext_cut.webp"
+				src="images/C_TCR_notext_cut_mq.webp"
 				alt="3 Canaries Logo"
-				height="220px"
-				width="256px"
+				height="100px"
+				width="86px"
+				loading="eager"
 			/>
 		</a>
 		<div class="tc:flex hidden select-none">
-			<img class="ml-2 h-10 ml:hidden flex w-max" src="images/C_TC_text_cut.webp" alt="Three Canaries" height="100px" width="769px"/>
+			<img class="ml-2 h-10 ml:hidden flex w-max" src="images/C_TC_text_cut_mq.webp" alt="Three Canaries" height="100px" width="769px"/>
 		</div>
 		{#each items as item}
 			<NavItem {item} attrs="ml:flex hidden h-20 xl:px-4 px-2.5 xl:text-2xl text-xl" />

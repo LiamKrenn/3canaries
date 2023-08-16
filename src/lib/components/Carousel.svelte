@@ -39,8 +39,9 @@
 		elemCarousel.style.scrollBehavior = 'smooth';
 	}
 
-	onMount(() => {console.log("mount");
-	})
+
+	let mount = false
+	onMount(() => { mount = true; })
 </script>
 
 <svelte:window on:resize={resize} />
@@ -53,21 +54,23 @@
 		{#each images as image}
 			<div class="min-w-full h-[50vh] flex items-center justify-center my-[-7vh] relative">
 				<img
-					class="absolute top-0 min-w-full h-[50vh] object-cover brightness-[.4]"
+					class="absolute top-0 min-w-full h-[50vh] object-cover brightness-[.4] blur-sm"
 					src="images/{image}lq.webp"
 					alt={image}
 					loading="eager"
-					height="256px"
-					width="171px"
+					height="128px"
+					width="86px"
 				/>
+				{#if mount}
 				<img
 					class="absolute top-0 min-w-full h-[50vh] object-cover brightness-[.4]"
 					src="images/{image}hq.webp"
 					alt={image}
-					loading="lazy"
+					loading="eager"
 					height="2560px"
 					width="1707px"
 				/>
+				{/if}				
 				<div
 					class="absolute cursor-default justify-center flex flex-col items-center lg:w-[40rem] w-[85%]  h-[24rem] xs:h-[23rem] md:h-[20rem] max-h-[35vh]  border-white border-4 text-center"
 				>
