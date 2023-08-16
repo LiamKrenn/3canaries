@@ -19,7 +19,7 @@
 			/>
 		</a>
 		<div class="tc:flex hidden select-none">
-			<img class="ml-2 h-10 ml:hidden flex" src="images/C_TC_text_cut.webp" alt="Three Canaries" height="100px" width="769px"/>
+			<img class="ml-2 h-10 ml:hidden flex w-max" src="images/C_TC_text_cut.webp" alt="Three Canaries" height="100px" width="769px"/>
 		</div>
 		{#each items as item}
 			<NavItem {item} attrs="ml:flex hidden h-20 xl:px-4 px-2.5 xl:text-2xl text-xl" />
