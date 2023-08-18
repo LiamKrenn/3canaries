@@ -2,26 +2,40 @@
 	import ChevronLeft from '$lib/icons/chevron-left.svelte';
 	import ChevronRight from '$lib/icons/chevron-right.svelte';
 	import { onMount } from 'svelte';
-	const images = ['title1', 'title2', 'title3'];
-	const content: { [key: string]: { title: string; content: string; }; } = {
-		'title1': {
+	import Picture from './Picture.svelte';
+
+	// @ts-ignore
+	import Title1 from '$lib/assets/images/title1hq.webp?w=200;400;800;1200;1440;1600;2000;2560&format=avif;webp;jpg&as=picture';
+	// @ts-ignore
+	import Title2 from '$lib/assets/images/title2hq.webp?w=200;400;800;1200;1440;1600;2000;2560&format=avif;webp;jpg&as=picture';
+	// @ts-ignore
+	import Title3 from '$lib/assets/images/title3hq.webp?w=200;400;800;1200;1440;1600;2000;2560&format=avif;webp;jpg&as=picture';
+
+	let content: { [key: string]: { title: string; content: string; hq: any; loaded: boolean } } = {
+		1: {
 			title: 'Three Canaries Records',
-			content: '-  more than a vinyl shop  -'
+			content: '-  more than a vinyl shop  -',
+			hq: Title1,
+			loaded: false
 		},
-		'title2': {
+		2: {
 			title: 'Discogs',
 			content:
-				'Meine komplette "Vinylographie" findest du auf der Online-Plattform Discogs, bei der auch einfach & bequem Bestellungen möglich sind!'
+				'Meine komplette "Vinylographie" findest du auf der Online-Plattform Discogs, bei der auch einfach & bequem Bestellungen möglich sind!',
+			hq: Title2,
+			loaded: false
 		},
-		'title3': {
+		3: {
 			title: 'Oldschool-Plattenladen',
-			content: `Besuch uns einfach in unserem Plattenladen "Three Canaries" in Graz! It's more than a Vinyl Shop. #seeyouthere`
+			content: `Besuch uns einfach in unserem Plattenladen "Three Canaries" in Graz! It's more than a Vinyl Shop. #seeyouthere`,
+			hq: Title3,
+			loaded: false
 		}
 	};
 
 	let elemCarousel: HTMLDivElement;
 	let counter: number = 0;
-	const pages: number = images.length;
+	const pages: number = Object.keys(content).length;
 
 	function carouselLeft(): void {
 		counter = (counter - 1 + pages) % pages;
@@ -39,9 +53,10 @@
 		elemCarousel.style.scrollBehavior = 'smooth';
 	}
 
-
-	let mount = false
-	onMount(() => { mount = true; })
+	let mount = false;
+	onMount(() => {
+		mount = true;
+	});
 </script>
 
 <svelte:window on:resize={resize} />
@@ -51,28 +66,33 @@
 		bind:this={elemCarousel}
 		class="snap-x snap-mandatory scroll-smooth flex overflow-y-hidden overflow-x-hidden"
 	>
-		{#each images as image}
+		{#each Object.keys(content) as image}
 			<div class="min-w-full h-[50vh] flex items-center justify-center my-[-7vh] relative">
-				<img
-					class="absolute top-0 min-w-full h-[50vh] object-cover brightness-[.4] blur-sm"
-					src="images/{image}lq.webp"
-					alt={image}
-					loading="eager"
-					height="128px"
-					width="86px"
-				/>
+				{#if !content[image].loaded}
+					<img
+						class="absolute top-0 min-w-full h-[50vh] object-cover brightness-[.4] blur-sm"
+						src="images/title{image}lq.webp"
+						alt="Hintergrundbild"
+						loading="eager"
+						height="128px"
+						width="86px"
+					/>
+				{/if}
 				{#if mount}
-				<img
-					class="absolute top-0 min-w-full h-[50vh] object-cover brightness-[.4] blur-[1px]"
-					src="images/{image}mq.webp"
-					alt={image}
-					loading="eager"
-					height="1080px"
-					width="720px"
-				/>
-				{/if}				
+					<Picture
+						meta={content[image].hq}
+						loading="eager"
+						alt="Hintergrundbild"
+						width="720px"
+						height="1080px"
+						imageClass="absolute top-0 left-0 min-w-full h-[50vh] object-cover brightness-[.4] blur-[1px]"
+						on:load={() => {
+							content[image].loaded = true;
+						}}
+					/>
+				{/if}
 				<div
-					class="absolute cursor-default justify-center flex flex-col items-center lg:w-[40rem] w-[85%]  h-[24rem] xs:h-[23rem] md:h-[20rem] max-h-[35vh]  border-white border-4 text-center"
+					class="absolute cursor-default justify-center flex flex-col items-center lg:w-[40rem] w-[85%] h-[24rem] xs:h-[23rem] md:h-[20rem] max-h-[35vh] border-white border-4 text-center"
 				>
 					<h1 class="h1 text-secondary-500">{content[image].title}</h1>
 					<p class="text-white text-2xl mx-6 mt-4">{content[image].content}</p>
