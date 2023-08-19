@@ -94,6 +94,7 @@
 	<button
 		type="button"
 		class="btn-icon variant-filled absolute sm:scale-100 scale-75 lg:left-[10%] md:left-[3%] left-[1%] top-[45%] stroke-current"
+		aria-label="Vorheriges Foto"
 		on:click={carouselLeft}
 	>
 		<ChevronLeft />
@@ -101,6 +102,7 @@
 	<button
 		type="button"
 		class="btn-icon variant-filled absolute sm:scale-100 scale-75 lg:right-[10%] md:right-[3%] right-[1%] top-[45%] stroke-current"
+		aria-label="Nächstes Foto"
 		on:click={carouselRight}
 	>
 		<ChevronRight />
