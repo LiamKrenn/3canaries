@@ -41,6 +41,7 @@
 	"dependencies": {
 		"delegates": "^1.0.0",
 		"emoji-regex": "^10.2.1",
+		"moment-timezone": "^0.5.43",
 		"pocketbase": "^0.16.0"
 	}
 }
