@@ -5,11 +5,11 @@
 	import Picture from './Picture.svelte';
 
 	// @ts-ignore
-	import Title1 from '$lib/assets/images/title1hq.webp?w=200;400;800;1200;1440;1600;1800;2000;2250;2560&format=avif;webp;jpg&as=picture';
+	import Title1 from '$lib/assets/images/title1hq.webp?w=200;400;800;1200;1440;1600;1800;2000;2250;2400;2560&format=avif;webp;jpg&as=picture';
 	// @ts-ignore
-	import Title2 from '$lib/assets/images/title2hq.webp?w=200;400;800;1200;1440;1600;1800;2000;2250;2560&format=avif;webp;jpg&as=picture';
+	import Title2 from '$lib/assets/images/title2hq.webp?w=200;400;800;1200;1440;1600;1800;2000;2250;2400;2560&format=avif;webp;jpg&as=picture';
 	// @ts-ignore
-	import Title3 from '$lib/assets/images/title3hq.webp?w=200;400;800;1200;1440;1600;1800;2000;2250;2560&format=avif;webp;jpg&as=picture';
+	import Title3 from '$lib/assets/images/title3hq.webp?w=200;400;800;1200;1440;1600;1800;2000;2250;2400;2560&format=avif;webp;jpg&as=picture';
 	import Image from './Image.svelte';
 
 	let content: { [key: string]: { title: string; content: string; hq: any; loaded: boolean } } = {

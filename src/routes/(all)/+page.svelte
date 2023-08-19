@@ -10,9 +10,9 @@
 	import type { PageData } from './$types';
 
 	// @ts-ignore
-	import MeinLaden from '$lib/assets/images/meinladenhq.webp?w=200;400;800;1200;1440&format=avif;webp;jpg&as=picture';
+	import MeinLaden from '$lib/assets/images/meinladenhq.webp?w=200;400;800;1000;1200;1440&format=avif;webp;jpg&as=picture';
 	// @ts-ignore
-	import MeinPlatten from '$lib/assets/images/meinplattenhq.webp?w=200;400;800;1200;1440&format=avif;webp;jpg&as=picture';
+	import MeinPlatten from '$lib/assets/images/meinplattenhq.webp?w=200;400;800;1000;1200;1440&format=avif;webp;jpg&as=picture';
 	import Picture from '$lib/components/Picture.svelte';
 	import Image from '$lib/components/Image.svelte';
 

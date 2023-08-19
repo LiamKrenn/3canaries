@@ -4,13 +4,13 @@
 	import { onMount } from 'svelte';
 
 	// @ts-ignore
-	import Scnd1 from '$lib/assets/images/scnd1hq.webp?w=200;400;800;1200;1440;1600;1800;2000;2250;2560&format=avif;webp;jpg&as=picture';
+	import Scnd1 from '$lib/assets/images/scnd1hq.webp?w=200;400;800;1200;1440;1600;1800;2000;2250;2400;2560&format=avif;webp;jpg&as=picture';
 	// @ts-ignore
-	import Scnd2 from '$lib/assets/images/scnd2hq.webp?w=200;400;800;1200;1440;1600;1800;2000;2250;2560&format=avif;webp;jpg&as=picture';
+	import Scnd2 from '$lib/assets/images/scnd2hq.webp?w=200;400;800;1200;1440;1600;1800;2000;2250;2400;2560&format=avif;webp;jpg&as=picture';
 	// @ts-ignore
-	import Scnd3 from '$lib/assets/images/scnd3hq.webp?w=200;400;800;1200;1440;1600;1800;2000;2250;2560&format=avif;webp;jpg&as=picture';
+	import Scnd3 from '$lib/assets/images/scnd3hq.webp?w=200;400;800;1200;1440;1600;1800;2000;2250;2400;2560&format=avif;webp;jpg&as=picture';
 	// @ts-ignore
-	import Scnd4 from '$lib/assets/images/scnd4hq.webp?w=200;400;800;1200;1440;1600;1800;2000;2250;2560&format=avif;webp;jpg&as=picture';
+	import Scnd4 from '$lib/assets/images/scnd4hq.webp?w=200;400;800;1200;1440;1600;1800;2000;2250;2400;2560&format=avif;webp;jpg&as=picture';
 	import Image from './Image.svelte';
 
 	const images = [Scnd1, Scnd2, Scnd3, Scnd4];
