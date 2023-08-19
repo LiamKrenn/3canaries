@@ -102,7 +102,7 @@
 			/>
 		</header>
 		<div class="md:p-6 p-4">
-			<h3 class="h3 mb-2">Mein Laden.</h3>
+			<h2 class="h3 mb-2">Mein Laden.</h2>
 			<p class="whitespace-break-spaces">
 				{`Mein Plattenladen in Graz (Steiermark) ist nicht nur "Geschäft" - es ist Lebensgefühl. Ein Ort, bei dem Zeit keine Rolle spielt. Ein Ort der Leidenschaft & Hingabe zur Kunst Musik. "More than an Vinyl Shop" eben. Aus purer Überzeugung...`}
 			</p>
@@ -126,7 +126,7 @@
 			/>
 		</header>
 		<div class="md:p-6 p-4">
-			<h4 class="h3 mb-2">Meine Platten.</h4>
+			<h2 class="h3 mb-2">Meine Platten.</h2>
 			<p class="whitespace-break-spaces">
 				{`Im Laufe der Zeit sammelten sich die Werke. Ohne Druck, ohne Stress. Die nunmehr exklusive Vinyl-Kollektion beinhaltet seltenste Ausgaben und echte Schmuckstücke. Wenn es nach meinem Geschmack geht, versteht sich. Vielleicht findest du hier genau deine Platte...`}
 			</p>
