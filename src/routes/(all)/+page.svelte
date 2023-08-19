@@ -126,7 +126,7 @@
 			/>
 		</header>
 		<div class="md:p-6 p-4">
-			<h3 class="h3 mb-2">Meine Platten.</h3>
+			<h4 class="h3 mb-2">Meine Platten.</h4>
 			<p class="whitespace-break-spaces">
 				{`Im Laufe der Zeit sammelten sich die Werke. Ohne Druck, ohne Stress. Die nunmehr exklusive Vinyl-Kollektion beinhaltet seltenste Ausgaben und echte Schmuckstücke. Wenn es nach meinem Geschmack geht, versteht sich. Vielleicht findest du hier genau deine Platte...`}
 			</p>
