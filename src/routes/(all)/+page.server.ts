@@ -3,12 +3,12 @@ import type { Times } from '$lib/Types';
 import type { PageServerLoad } from './$types';
 import PocketBase, { ListResult } from 'pocketbase';
 
-import { TEST_KEY } from '$env/static/private';
+import { FETCH_BYPASS_KEY } from '$env/static/private';
 
 export const config = {
   isr: {
     expiration: 300,
-    bypassToken: TEST_KEY,
+    bypassToken: FETCH_BYPASS_KEY,
   },
 };
 
