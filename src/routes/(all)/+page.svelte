@@ -8,6 +8,14 @@
 	import Info from '$lib/icons/info.svelte';
 	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
+
+	// @ts-ignore
+	import MeinLaden from '$lib/assets/images/meinladenhq.webp?w=200;400;800;1200;1440&format=avif;webp;jpg&as=picture';
+	// @ts-ignore
+	import MeinPlatten from '$lib/assets/images/meinplattenhq.webp?w=200;400;800;1200;1440&format=avif;webp;jpg&as=picture';
+	import Picture from '$lib/components/Picture.svelte';
+	import Image from '$lib/components/Image.svelte';
+
 	export let data: PageData;
 
 	function shortDate(date: string) {
@@ -27,8 +35,10 @@
 		return from + '-' + to;
 	}
 
-	let mount = false
-	onMount(() => { mount = true; })
+	let mount = false;
+	onMount(() => {
+		mount = true;
+	});
 </script>
 
 <svelte:head>
@@ -77,26 +87,19 @@
 >
 	<div class="card lg:w-[40vw] w-[90%] h-max-[30rem] mx-4 my-2 rounded-lg variant-filled-secondary">
 		<header class="relative">
-			
-			<img
-				class="w-full rounded-lg shrink-0 h-auto"
-				src="images/meinladenlq.webp"
+			<Image
+				lqclass="w-full rounded-lg shrink-0 h-auto"
+				lqsrc="images/meinladenlq.webp"
+				lqwidth="144px"
+				lqheight="108px"
+				hqclass="w-full rounded-lg shrink-0 h-auto"
+				hqimage={MeinLaden}
+				hqheight="1080px"
+				hqwidth="1440px"
+				hqloading="eager"
 				alt="Laden Eingang"
-				height="108px"
-				width="144px"
-				loading="eager"
+				{mount}
 			/>
-			{#if mount}
-			<img
-				class="w-full rounded-lg shrink-0 h-auto absolute top-0"
-				src="images/meinladenhq.webp"
-				alt="Laden Eingang"
-				height="1080px"
-				width="1440px"
-				loading="eager"
-			/>
-			{/if}
-			
 		</header>
 		<div class="md:p-6 p-4">
 			<h3 class="h3 mb-2">Mein Laden.</h3>
@@ -108,24 +111,19 @@
 
 	<div class="card lg:w-[40vw] w-[90%] mx-4 my-2 rounded-lg variant-filled-secondary">
 		<header class="relative">
-			<img
-				class="w-full rounded-lg shrink-0 h-auto"
-				src="images/meinplattenlq.webp"
-				alt="Laden Eingang"
-				height="108px"
-				width="144px"
-				loading="eager"
+			<Image
+				lqclass="w-full rounded-lg shrink-0 h-auto"
+				lqsrc="images/meinplattenlq.webp"
+				lqwidth="144px"
+				lqheight="108px"
+				hqclass="w-full rounded-lg shrink-0 h-auto"
+				hqimage={MeinPlatten}
+				hqheight="1080px"
+				hqwidth="1440px"
+				hqloading="eager"
+				alt="Einige Platten"
+				{mount}
 			/>
-			{#if mount}
-			<img
-				class="w-full rounded-lg shrink-0 h-auto absolute top-0"
-				src="images/meinplattenhq.webp"
-				alt="Laden Eingang"
-				height="1080px"
-				width="1440px"
-				loading="lazy"
-			/>
-			{/if}
 		</header>
 		<div class="md:p-6 p-4">
 			<h3 class="h3 mb-2">Meine Platten.</h3>

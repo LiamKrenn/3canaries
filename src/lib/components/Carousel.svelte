@@ -5,11 +5,12 @@
 	import Picture from './Picture.svelte';
 
 	// @ts-ignore
-	import Title1 from '$lib/assets/images/title1hq.webp?w=200;400;800;1200;1440;1600;2000;2560&format=avif;webp;jpg&as=picture';
+	import Title1 from '$lib/assets/images/title1hq.webp?w=200;400;800;1200;1440;1600;1800;2000;2250;2560&format=avif;webp;jpg&as=picture';
 	// @ts-ignore
-	import Title2 from '$lib/assets/images/title2hq.webp?w=200;400;800;1200;1440;1600;2000;2560&format=avif;webp;jpg&as=picture';
+	import Title2 from '$lib/assets/images/title2hq.webp?w=200;400;800;1200;1440;1600;1800;2000;2250;2560&format=avif;webp;jpg&as=picture';
 	// @ts-ignore
-	import Title3 from '$lib/assets/images/title3hq.webp?w=200;400;800;1200;1440;1600;2000;2560&format=avif;webp;jpg&as=picture';
+	import Title3 from '$lib/assets/images/title3hq.webp?w=200;400;800;1200;1440;1600;1800;2000;2250;2560&format=avif;webp;jpg&as=picture';
+	import Image from './Image.svelte';
 
 	let content: { [key: string]: { title: string; content: string; hq: any; loaded: boolean } } = {
 		1: {
@@ -68,29 +69,19 @@
 	>
 		{#each Object.keys(content) as image}
 			<div class="min-w-full h-[50vh] flex items-center justify-center my-[-7vh] relative">
-				{#if !content[image].loaded}
-					<img
-						class="absolute top-0 min-w-full h-[50vh] object-cover brightness-[.4] blur-sm"
-						src="images/title{image}lq.webp"
-						alt="Hintergrundbild"
-						loading="eager"
-						height="128px"
-						width="86px"
-					/>
-				{/if}
-				{#if mount}
-					<Picture
-						meta={content[image].hq}
-						loading="eager"
-						alt="Hintergrundbild"
-						width="720px"
-						height="1080px"
-						imageClass="absolute top-0 left-0 min-w-full h-[50vh] object-cover brightness-[.4] blur-[1px]"
-						on:load={() => {
-							content[image].loaded = true;
-						}}
-					/>
-				{/if}
+				<Image
+					lqclass="min-w-full h-[50vh] object-cover brightness-[.4] blur-sm"
+					lqsrc="images/title{image}lq.webp"
+					lqwidth="128px"
+					lqheight="86px"
+					hqclass="min-w-full h-[50vh] object-cover brightness-[.4] blur-[1px]"
+					hqimage={content[image].hq}
+					hqloading="eager"
+					hqwidth="2560px"
+					hqheight="1707px"
+					alt="Hintergrundbild"
+					{mount}
+				/>
 				<div
 					class="absolute cursor-default justify-center flex flex-col items-center lg:w-[40rem] w-[85%] h-[24rem] xs:h-[23rem] md:h-[20rem] max-h-[35vh] border-white border-4 text-center"
 				>
