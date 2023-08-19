@@ -49,11 +49,6 @@
 	/>
 </svelte:head>
 
-<div class="h-min w-full bg-secondary-500 text-black flex text-xs">
-	<span class="scale-50 -m-1"><Info /></span>Diese Website wird aktiv entwickelt. Wir bitten um
-	Nachsicht, falls Ladezeiten etwas länger dauern!
-</div>
-
 <Carousel />
 
 <div
