@@ -5,7 +5,6 @@
 	import Carousel from '$lib/components/Carousel.svelte';
 	import Carousel2 from '$lib/components/Carousel2.svelte';
 	import ChevronRight from '$lib/icons/chevron-right.svelte';
-	import Info from '$lib/icons/info.svelte';
 	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
 
@@ -55,6 +54,7 @@
 >
 	<h1 class="h2 w-fit dark:text-black">Aktuelle Öffnungszeiten</h1>
 	<div class="flex flex-col items-start">
+
 		{#each data.times as time}
 			<p
 				class=" dark:text-black text-2xl mt-4 whitespace-nowrap flex items-center justify-between w-full"
@@ -65,11 +65,22 @@
 			<p class="text-2xl dark:text-black font-thin">{time.event}</p>
 		{/each}
 	</div>
+	{#if data.times.length != 0}
 	<a
 		href="/open-times"
 		class="text-xl pb-4 px-4 pt-4 mt-2 underline flex items-center cursor-pointer dark:text-black stroke-black"
 		>Alle Öffnungszeiten<ChevronRight /></a
 	>
+	{:else}
+	<p class="text-xl pb-2 px-4 pt-2 mt-2 flex items-center cursor-pointer dark:text-black stroke-black">
+		Aktuell wissen wir nicht, wann wir aufsperren.
+	</p>
+	<a
+			href="/socials"
+			class="underline flex dark:text-black stroke-black"
+			>Folge uns in der Zwischenzeit!<ChevronRight /></a
+		>
+	{/if}
 </div>
 <div class="w-full pt-16 pb-12 justify-center text-center cursor-default">
 	<h1 class="h1 font-bold mb-6">Three Canaries Records.</h1>
