@@ -2,7 +2,6 @@
 	import ChevronLeft from '$lib/icons/chevron-left.svelte';
 	import ChevronRight from '$lib/icons/chevron-right.svelte';
 	import { onMount } from 'svelte';
-	import Picture from './Picture.svelte';
 
 	// @ts-ignore
 	import Title1 from '$lib/assets/images/title1hq.webp?w=200;400;800;1200;1440;1600;1800;2000;2250;2400;2560&format=avif;webp;jpg&as=picture';
