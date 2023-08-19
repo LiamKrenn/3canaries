@@ -24,7 +24,7 @@
 			href="/"
 		>
 			<Image
-				lqclass="w-20 p-0.5 hover:scale-105 duration-150 blur-sm"
+				lqclass="w-20 p-0.5 hover:scale-105 duration-150"
 				lqsrc="images/C_TCR_notext_cut_lq.webp"
 				lqwidth="51px"
 				lqheight="44px"
