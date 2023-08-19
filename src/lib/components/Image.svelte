@@ -20,15 +20,9 @@
 	let loaded: boolean = false;
 </script>
 
-<img
-	class="{lqclass} {loaded ? 'invisible' : ''}"
-	src={lqsrc}
-	{alt}
-	loading={lqloading}
-	height={lqheight}
-	width={lqwidth}
-/>
-
+{#if !loaded}
+	<img class={lqclass} src={lqsrc} {alt} loading={lqloading} height={lqheight} width={lqwidth} />
+{/if}
 {#if mount}
 	<Picture
 		meta={hqimage}
@@ -36,7 +30,7 @@
 		{alt}
 		height={hqheight}
 		width={hqwidth}
-		imageClass="{hqclass} absolute top-0 left-0"
+		imageClass="{hqclass} {loaded ? '' : 'absolute top-0 left-0'}"
 		on:load={() => {
 			loaded = true;
 		}}
