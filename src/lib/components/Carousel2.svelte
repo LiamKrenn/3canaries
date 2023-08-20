@@ -55,7 +55,7 @@
 					lqsrc="images/scnd{images.indexOf(image) + 1}lq.webp"
 					lqwidth="256px"
 					lqheight="171px"
-					hqclass="min-w-full h-[50vh] object-cover"
+					hqclass="min-w-full h-[50vh] object-cover absolute top-0 left-0"
 					hqimage={image}
 					hqloading="lazy"
 					hqwidth="1440px"
