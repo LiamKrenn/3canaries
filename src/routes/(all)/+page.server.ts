@@ -20,9 +20,9 @@ export const load = (async () => {
 		filter: `from >= "${moment(new Date()).tz('Europe/Vienna').format('YYYY-MM-DD')} 00:00:00"`,
 		sort: 'from'
 	});
-	const p: Times[] = structuredClone(result.items);
+	const times: Times[] = structuredClone(result.items);
 
 	return {
-		times: p
+		times: times
 	};
 }) satisfies PageServerLoad;
