@@ -73,7 +73,7 @@
 					lqsrc="images/title{image}lq.webp"
 					lqwidth="128px"
 					lqheight="86px"
-					hqclass="min-w-full h-[50vh] object-cover brightness-[.4] blur-[1px]"
+					hqclass="min-w-full h-[50vh] object-cover brightness-[.4] blur-[1px] absolute left-0 top-0"
 					hqimage={content[image].hq}
 					hqloading="eager"
 					hqwidth="2560px"
