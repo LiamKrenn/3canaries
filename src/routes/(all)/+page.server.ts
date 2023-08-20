@@ -8,7 +8,7 @@ import { FETCH_BYPASS_KEY } from '$env/static/private';
 
 export const config = {
 	isr: {
-		expiration: 86400,
+		expiration: 300,
 		bypassToken: FETCH_BYPASS_KEY
 	}
 };
