@@ -1,12 +1,12 @@
 import { FETCH_BYPASS_KEY } from '$env/static/private';
 import type { RequestHandler } from '@sveltejs/kit';
 
-const routes: string[] = ['/', '/partner', '/open-times', 'news'];
+const routes: string[] = ['/', '/partner', '/open-times', '/news'];
 
 async function revalidateRoute(route: string) {
 	return await fetch('https://3canaries.com' + route, {
 		headers: {
-			'x-my-custom-header': FETCH_BYPASS_KEY
+			'x-prerender-revalidate': FETCH_BYPASS_KEY
 		}
 	});
 }
