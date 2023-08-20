@@ -6,11 +6,11 @@
 	// @ts-ignore
 	import Scnd1 from '$lib/assets/images/scnd1hq.webp?w=200;400;800;1200;1440;1600;1800;2000;2250;2400;2560&format=avif;webp;jpg&as=picture';
 	// @ts-ignore
-	import Scnd2 from '$lib/assets/images/scnd2hq.webp?w=200;400;800;1200;1440;1600;1800;2000;2250;2400;2560&format=avif;webp;jpg&as=picture';
+	import Scnd2 from '$lib/assets/images/scnd2hq.webp?w=200;400;800;1200;1440;1600;1707&format=avif;webp;jpg&as=picture';
 	// @ts-ignore
 	import Scnd3 from '$lib/assets/images/scnd3hq.webp?w=200;400;800;1200;1440;1600;1800;2000;2250;2400;2560&format=avif;webp;jpg&as=picture';
 	// @ts-ignore
-	import Scnd4 from '$lib/assets/images/scnd4hq.webp?w=200;400;800;1200;1440;1600;1800;2000;2250;2400;2560&format=avif;webp;jpg&as=picture';
+	import Scnd4 from '$lib/assets/images/scnd4hq.webp?w=200;400;800;1200;1440&format=avif;webp;jpg&as=picture';
 	import Image from './Image.svelte';
 
 	const images = [Scnd1, Scnd2, Scnd3, Scnd4];
@@ -49,13 +49,13 @@
 		class="snap-x snap-mandatory scroll-smooth flex overflow-y-hidden overflow-x-hidden"
 	>
 		{#each images as image}
-			<div class="min-w-full h-[50vh] flex items-center justify-center relative">
+			<div class="min-w-full h-[75vh] flex items-center justify-center relative">
 				<Image
-					lqclass="min-w-full h-[50vh] object-cover blur-sm"
+					lqclass="min-w-full h-[75vh] object-cover blur-sm"
 					lqsrc="images/scnd{images.indexOf(image) + 1}lq.webp"
 					lqwidth="256px"
 					lqheight="171px"
-					hqclass="min-w-full h-[50vh] object-cover absolute top-0 left-0"
+					hqclass="min-w-full h-[75vh] object-cover absolute top-0 left-0"
 					hqimage={image}
 					hqloading="lazy"
 					hqwidth="1440px"

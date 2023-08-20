@@ -90,14 +90,14 @@
 <div
 	class="w-full flex lg:flex-row flex-col lg:flex-wrap py-2 justify-center lg:items-start items-center cursor-default mb-8"
 >
-	<div class="card lg:w-[40vw] w-[90%] h-max-[30rem] mx-4 my-2 rounded-lg variant-filled-secondary">
-		<header class="relative">
+	<div class="card lg:w-[40vw] w-[90%] max-w-[1440px] h-max-[30rem] mx-4 my-2 rounded-lg variant-filled-secondary">
+		<header class="relative max-h-[50vh]">
 			<Image
-				lqclass="w-full rounded-lg shrink-0 h-auto"
+				lqclass="w-full rounded-lg shrink-0 h-auto max-h-[50vh] object-cover"
 				lqsrc="images/meinladenlq.webp"
 				lqwidth="144px"
 				lqheight="108px"
-				hqclass="w-full rounded-lg shrink-0 h-auto"
+				hqclass="w-full rounded-lg shrink-0 h-auto max-h-[50vh] object-cover"
 				hqimage={MeinLaden}
 				hqheight="1080px"
 				hqwidth="1440px"
@@ -114,14 +114,14 @@
 		</div>
 	</div>
 
-	<div class="card lg:w-[40vw] w-[90%] mx-4 my-2 rounded-lg variant-filled-secondary">
-		<header class="relative">
+	<div class="card lg:w-[40vw] w-[90%] max-w-[1440px] mx-4 my-2 rounded-lg variant-filled-secondary">
+		<header class="relative max-h-[50vh]">
 			<Image
-				lqclass="w-full rounded-lg shrink-0 h-auto"
+				lqclass="w-full rounded-lg shrink-0 h-auto max-h-[50vh] object-cover"
 				lqsrc="images/meinplattenlq.webp"
 				lqwidth="144px"
 				lqheight="108px"
-				hqclass="w-full rounded-lg shrink-0 h-auto"
+				hqclass="w-full rounded-lg shrink-0 h-auto max-h-[50vh] object-cover"
 				hqimage={MeinPlatten}
 				hqheight="1080px"
 				hqwidth="1440px"
