@@ -1,5 +1,7 @@
 import { FETCH_BYPASS_KEY } from '$env/static/private';
 import type { RequestHandler } from '@sveltejs/kit';
+import type { Handle } from '@sveltejs/kit';
+
 
 const routes: string[] = ['/', '/partner', '/open-times', '/news'];
 
@@ -11,6 +13,15 @@ async function revalidateRoute(route: string) {
 		mode: 'same-origin'
 	});
 }
+
+const corsHeaders = { "Access-Control-Allow-Credentials": "true",
+"Access-Control-Allow-Origin": "https://admin.3canaries.com",
+"Access-Control-Allow-Methods": "GET,OPTIONS,PATCH,DELETE,POST,PUT",
+"Access-Control-Allow-Headers": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, x-prerender-revalidate" }
+
+export const OPTIONS: RequestHandler = async () => {
+	return new Response('ok', { headers: corsHeaders });
+};
 
 export const GET: RequestHandler = async ({ request }) => {
 	if (request.headers.get('x-prerender-revalidate') === FETCH_BYPASS_KEY) {
