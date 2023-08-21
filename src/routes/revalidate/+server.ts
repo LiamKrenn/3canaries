@@ -7,7 +7,8 @@ async function revalidateRoute(route: string) {
 	await fetch('https://3canaries.com' + route, {
 		headers: {
 			'x-prerender-revalidate': FETCH_BYPASS_KEY
-		}
+		},
+		mode: 'same-origin'
 	});
 }
 
