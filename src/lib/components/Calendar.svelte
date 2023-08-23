@@ -47,11 +47,6 @@
 
 </script>
 
-<h4 class="w-full mt-4 flex justify-center text-surface-900-50-token h4 italic text-center">
-		- We're open, when we're open! -
-	</h4>
-
-
 <div class="flex items-center justify-center mx-2 py-8 ">
 	<button
 		on:click={decreaseMonth}
