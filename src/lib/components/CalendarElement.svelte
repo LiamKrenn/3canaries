@@ -19,6 +19,6 @@
   <div class="lg:border-r-[1px] lg:border-b-0 {desc ? 'border-b-[1px]' : 'hidden'} mx-3 lg:mx-0 border-surface-500 mt-0.5 lg:mt-0 "/>
   <div class="ml-4 flex flex-col justify-between pr-2 break-words {desc ? '' : 'hidden'} ">
     <p class="md:text-3xl text-2xl mt-2">{time.event}</p>
-    <p class="md:text-xl text-lg mt-1.5 mb-2 ">{time.event_description}</p>
+    <p class="md:text-xl text-lg mt-1.5 mb-2 break-words">{time.event_description}</p>
   </div>
 </div>
