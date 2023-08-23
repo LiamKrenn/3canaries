@@ -21,7 +21,7 @@ export const load = (async () => {
 	const maxyear: number = maxlim.getFullYear()
 	const options: Intl.DateTimeFormatOptions = {
 		month: 'long',
-		year: 'numeric'
+		year: '2-digit'
 	};
 	const monthYearText = new Date().toLocaleDateString('de-DE', options);
 
