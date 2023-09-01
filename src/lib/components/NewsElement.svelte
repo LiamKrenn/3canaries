@@ -36,7 +36,7 @@
 					class="w-full h-auto brightness-75 select-none rounded-t-lg absolute top-0"
 					src={`${url}/${article.collectionId}/${article.id}/${article.image}`}
 					alt={`Foto von ${article.title}`}
-					width="920px"
+					width="960px"
 					height="320px"
 					loading="eager"
 				/>
