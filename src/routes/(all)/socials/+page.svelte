@@ -25,7 +25,7 @@
 		<h1 class="h1 mt-2 ml-2">Instagram</h1>
 	</a>
 	
-    <a href="/open-times" class="mt-32 underline">
+    <a href="/" class="mt-32 underline">
         <h2 class="h2">Zurück</h2>
     </a>
     
