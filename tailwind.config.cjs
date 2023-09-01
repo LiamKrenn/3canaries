@@ -22,6 +22,8 @@ module.exports = {
 
 			tc: '600px',
 
+			'article': '710px',
+
 			md: '768px',
 			// => @media (min-width: 768px) { ... }
 
