@@ -14,20 +14,20 @@
 	let content: { [key: string]: { title: string; content: string; hq: any; loaded: boolean } } = {
 		1: {
 			title: 'Three Canaries Records',
-			content: '-  more than a vinyl shop  -',
+			content: '-more than a vinyl shop-',
 			hq: Title1,
 			loaded: false
 		},
 		2: {
 			title: 'Discogs',
 			content:
-				'Meine komplette "Vinylographie" findest du auf der Online-Plattform Discogs, bei der auch einfach & bequem Bestellungen möglich sind!',
+				'Meine "Vinylographie" findest du auf "Discogs", dort sind auch Bestellungen möglich!',
 			hq: Title2,
 			loaded: false
 		},
 		3: {
 			title: 'Oldschool-Plattenladen',
-			content: `Besuch uns einfach in unserem Plattenladen "Three Canaries" in Graz! It's more than a Vinyl Shop. #seeyouthere`,
+			content: `Besuch uns einfach im Plattenladen "Three Canaries" in Graz!`,
 			hq: Title3,
 			loaded: false
 		}
@@ -82,7 +82,7 @@
 					{mount}
 				/>
 				<div
-					class="absolute cursor-default justify-center flex flex-col items-center lg:w-[40rem] w-[85%] h-[24rem] xs:h-[23rem] md:h-[20rem] max-h-[35vh] border-white border-4 text-center"
+					class="absolute cursor-default justify-center flex flex-col items-center md:w-[40rem] sm:w-[75%] w-[85%] h-[24rem] xs:h-[20rem]  max-h-[29vh] border-white border-4 text-center"
 				>
 					<h1 class="h1 text-secondary-500">{content[image].title}</h1>
 					<p class="text-white text-2xl mx-6 mt-4">{content[image].content}</p>
