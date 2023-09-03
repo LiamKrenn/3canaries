@@ -33,23 +33,27 @@
 					loading="eager"
 				/>
 				{#if mount}
-				<img
-					class="h-[330px] w-[330px] absolute top-0"
-					src={`${url}/${partner.collectionId}/${partner.id}/${partner.logo}`}
-					alt={`${partner.name} Logo`}
-					width="330px"
-					height="330px"
-					loading="eager"
-				/>
+					<img
+						class="h-[330px] w-[330px] absolute top-0"
+						src={`${url}/${partner.collectionId}/${partner.id}/${partner.logo}`}
+						alt={`${partner.name} Logo`}
+						width="330px"
+						height="330px"
+						loading="eager"
+					/>
 				{/if}
 				<h1 class="text-3xl mt-6 h1">{@html partner.name}</h1>
-				<p class="text-xl mt-4 w-[330px]">{partner.description}</p>
-				<a
-					class="mt-8 btn bg-black text-white px-8 rounded-none relative bottom-0"
-					href={partner.link}
-					target="_blank"
-					rel="noreferrer">Mehr lesen</a
-				>
+				{#if partner.description != '' && partner.description != undefined}
+					<p class="text-xl mt-4 w-[330px]">{partner.description}</p>
+				{/if}
+				{#if partner.link != '' && partner.link != undefined}
+					<a
+						class="mt-8 btn bg-black text-white px-8 rounded-none relative bottom-0"
+						href={partner.link}
+						target="_blank"
+						rel="noreferrer">Mehr lesen</a
+					>
+				{/if}
 			</div>
 		{/each}
 	</div>
