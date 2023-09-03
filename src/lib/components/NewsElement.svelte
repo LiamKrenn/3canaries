@@ -51,6 +51,13 @@
 			</h1>
 			<p class="absolute right-0 mr-3 mt-2 md:text-xl text-lg text-surface-600-300-token">{date}</p>
 		</div>
-		<h3 class="md:m-6 m-4 h3 break-words w-auto">{@html article.description}</h3>
+		<h3 class="test md:m-6 m-4 h3 break-words w-auto">{@html article.description}</h3>
 	</div>
 </div>
+
+<style>
+	h3.test :global(a) {
+		color: dodgerblue;
+		text-decoration-line: underline;
+	}
+</style>
