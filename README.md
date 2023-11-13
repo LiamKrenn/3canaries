@@ -7,6 +7,6 @@ This is the official repository of the [Three Canaries records website](https://
 ## Gallery
 ![Photo from Store](static/images/news1.webp)
 ![Photo from Store](static/images/title3hq.webp)
-![Photo from Store](static/images/meinplatten.webp)
+![Photo from Store](static/images/meinplattenhq.webp)
 
 ![Logo of Three Canaries records](static/images/TCR_Transp_cut.webp)
