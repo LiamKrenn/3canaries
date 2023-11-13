@@ -6,6 +6,7 @@ export interface Partner {
 	id: string;
 	link: string;
 	logo: string;
+	logo_lq: string;
 	name: string;
 	updated: string;
 }
@@ -31,5 +32,6 @@ export interface News {
 	title: string;
 	description: string;
 	image: string;
+	image_lq: string;
 	display_date: string;
 }

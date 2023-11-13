@@ -8,6 +8,7 @@
 	class="hover:scale-105 duration-150 flex h-16 w-16 justify-center items-center cursor-pointer"
 	target="_blank"
 	rel="noreferrer"
+	aria-label="Hier gehts zum Facebook Account von Three Canaries"
 >
 	<FacebookIcon />
 </a>
@@ -16,6 +17,7 @@
 	class="hover:scale-105 duration-150 flex h-16 w-16 justify-center items-center cursor-pointer"
 	target="_blank"
 	rel="noreferrer"
+	aria-label="Hier gehts zum Instagram Account von Three Canaries"
 >
 	<InstagramIcon />
 </a>

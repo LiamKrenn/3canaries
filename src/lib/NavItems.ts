@@ -1,6 +1,6 @@
 export type Item = { title: string; link: string };
 
-export const items = [
+export const items: Item[] = [
   {
     title: 'Vinyl & more',
     link: '/'
@@ -33,20 +33,8 @@ export const footerItems = [
     link: '/data-protection'
   },
   {
-    title: 'Cookie-Einstellungen',
+    title: 'Cookie-Richtlinien',
     link: '/cookies'
   },
-  {
-    title: 'Lieferbedingungen',
-    link: '/delivery-terms'
-  },
-  {
-    title: 'Widerrufsbelehrung',
-    link: '/right-of-withdrawal'
-  },
-  {
-    title: 'AGB',
-    link: '/conditions'
-  }
 ];
 

@@ -2,6 +2,11 @@
 	import { page } from '$app/stores';
 </script>
 
+<svelte:head>
+	<title>Error! {$page.status}</title>
+	<meta name="description" content="Etwas ist schief gegangen. Code: {$page.status} Message: {$page.error?.message}" />
+</svelte:head>
+
 <div class="h-full w-full flex flex-col justify-center items-center bg-surface-800">
 	<div class="absolute top-0 mt-8 flex items-center">
 		<img class="h-20 mr-5" src="/images/C_TCR_notext_cut.webp" alt="Three Canaries Logo" />
