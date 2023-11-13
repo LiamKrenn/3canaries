@@ -1,38 +1,12 @@
-# create-svelte
+![Logo of Three Canaries Records](static/images/TCR_text_cut.webp)
+## About 
+This is the official repository of the [Three Canaries records website](https://3canaries.com/). The record store in Graz (Styria) is not just a "store" - it is a way of life. A place where time plays no role. A place of passion & dedication to the art of music. "More than just a vinyl store". Out of pure conviction...
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-## Creating a project
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Gallery
+![Photo from Store](static/images/news1.webp)
+![Photo from Store](static/images/title3hq.webp)
+![Photo from Store](static/images/meinplatten.webp)
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+![Logo of Three Canaries records](static/images/TCR_Transp_cut.webp)
