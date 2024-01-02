@@ -1,4 +1,5 @@
 <script lang="ts">
+
 	type ImgProps = {
 		src: string;
 		w: number;

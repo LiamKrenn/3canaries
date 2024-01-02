@@ -54,6 +54,7 @@
 >
 	<h1 class="h2 w-fit dark:text-black">Aktuelle Öffnungszeiten</h1>
 	<div class="flex flex-col items-start">
+
 		{#each data.times as time}
 			<p
 				class=" dark:text-black text-2xl mt-4 whitespace-nowrap flex items-center justify-between w-full"
@@ -65,18 +66,18 @@
 		{/each}
 	</div>
 	{#if data.times.length != 0}
-		<a
-			href="/open-times"
-			class="text-xl pb-4 px-4 pt-4 mt-2 underline flex items-center cursor-pointer dark:text-black stroke-black"
-			>Alle Öffnungszeiten<ChevronRight /></a
-		>
+	<a
+		href="/open-times"
+		class="text-xl pb-4 px-4 pt-4 mt-2 underline flex items-center cursor-pointer dark:text-black stroke-black"
+		>Alle Öffnungszeiten<ChevronRight /></a
+	>
 	{:else}
-		<p
-			class="text-xl pb-2 px-4 pt-2 mt-2 flex items-center cursor-pointer dark:text-black stroke-black"
-		>
-			Aktuell wissen wir nicht, wann wir aufsperren.
-		</p>
-		<a href="/socials" class="underline flex dark:text-black stroke-black"
+	<p class="text-xl pb-2 px-4 pt-2 mt-2 flex items-center cursor-pointer dark:text-black stroke-black">
+		Aktuell wissen wir nicht, wann wir aufsperren.
+	</p>
+	<a
+			href="/socials"
+			class="underline flex dark:text-black stroke-black"
 			>Folge uns in der Zwischenzeit!<ChevronRight /></a
 		>
 	{/if}
@@ -89,9 +90,7 @@
 <div
 	class="w-full flex lg:flex-row flex-col lg:flex-wrap py-2 justify-center lg:items-start items-center cursor-default mb-8"
 >
-	<div
-		class="card lg:w-[40vw] w-[90%] max-w-[1440px] h-max-[30rem] mx-4 my-2 rounded-lg variant-filled-secondary"
-	>
+	<div class="card lg:w-[40vw] w-[90%] max-w-[1440px] h-max-[30rem] mx-4 my-2 rounded-lg variant-filled-secondary">
 		<header class="relative max-h-[50vh]">
 			<Image
 				lqclass="w-full rounded-lg shrink-0 h-auto max-h-[50vh] object-cover"
@@ -115,9 +114,7 @@
 		</div>
 	</div>
 
-	<div
-		class="card lg:w-[40vw] w-[90%] max-w-[1440px] mx-4 my-2 rounded-lg variant-filled-secondary"
-	>
+	<div class="card lg:w-[40vw] w-[90%] max-w-[1440px] mx-4 my-2 rounded-lg variant-filled-secondary">
 		<header class="relative max-h-[50vh]">
 			<Image
 				lqclass="w-full rounded-lg shrink-0 h-auto max-h-[50vh] object-cover"

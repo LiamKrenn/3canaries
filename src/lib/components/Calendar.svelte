@@ -17,8 +17,8 @@
 	let minlim: boolean = true;
 	let maxlim: boolean = min.getFullYear() == maxyear && min.getMonth() == maxmonth;
 	const disabledStyle: string = 'invisible';
-	const enabledStyle: string =
-		'cursor-pointer card-hover bg-surface-200 dark:bg-surface-600 stroke-black flex-shrink-0';
+	const enabledStyle: string = 'cursor-pointer card-hover bg-surface-200 dark:bg-surface-600 stroke-black flex-shrink-0';
+
 
 	function increaseMonth() {
 		if (maxlim) return;
@@ -44,9 +44,10 @@
 		minlim = month.getFullYear() == min.getFullYear() && month.getMonth() == min.getMonth();
 		times = await getTimesPerMonth(month);
 	}
+
 </script>
 
-<div class="flex items-center justify-center mx-2 py-8">
+<div class="flex items-center justify-center mx-2 py-8 ">
 	<button
 		on:click={decreaseMonth}
 		class="card w-10 h-10 flex justify-center items-center mb-1.5 border-surface-800 border {minlim
@@ -58,7 +59,7 @@
 	<h1
 		class="h1 justify-center md:mx-12 sm:mx-6 mx-3 md:w-[26rem] w-[13rem] whitespace-nowrap text-center dark:text-surface-50 cursor-default flex items-baseline"
 	>
-		{monthYear.slice(0, -3)}
+		{monthYear.slice(0,-3)}
 		<p class="border-t-[1px] md:pt-1 md:ml-4 ml-2">
 			{monthYear.slice(-2)}
 		</p>
@@ -74,7 +75,7 @@
 	</button>
 </div>
 
-<div class="w-full overflow-y-auto overflow-x-hidden rounded-xl flex flex-col items-center">
+<div class="w-full overflow-y-auto overflow-x-hidden rounded-xl flex flex-col items-center ">
 	{#each times as time (time.id)}
 		<CalendarElement {time} />
 	{/each}

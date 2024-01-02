@@ -6,7 +6,7 @@
 	<meta name="description" content="Impressum von Three Canaries records." />
 </svelte:head>
 
-<div class="h-min w-full md:px-[25%] px-[10%] justify-center">
+<div class="h-min w-full  md:px-[25%] px-[10%]  justify-center">
 	<h1 class="h1 my-8">Impressum</h1>
 	<p class="font-bold mb-4">Three Canaries records.</p>
 	<p>
