@@ -11,7 +11,7 @@
   const desc: boolean = ((time.event != '') || (time.event_description != ''))
 </script>
 
-<div class="card flex lg:flex-row flex-col w-[80%] variant-ghost-primary m-1 rounded-lg card-hover hover:scale-100 cursor-default py-2 dark:text-surface-50 ">
+<div class="card flex lg:flex-row flex-col w-[80%] variant-ghost-primary m-1 rounded-lg cursor-default py-2 dark:text-surface-50 ">
   <div class="shrink-0 lg:w-[20rem] w-full pt-3 pl-4 pb-1.5 pr-2 ">
     <h2 class="h2 font-bold break-words">{longdate}., {weekday}</h2>
     <h3 class="h3 mt-3 ">{from}-{to}</h3>
