@@ -6,10 +6,10 @@ import PocketBase, { Record } from 'pocketbase';
 import { FETCH_BYPASS_KEY } from '$env/static/private';
 
 export const config = {
-  isr: {
-    expiration: 86400,
-    bypassToken: FETCH_BYPASS_KEY,
-  },
+	isr: {
+		expiration: 86400,
+		bypassToken: FETCH_BYPASS_KEY
+	}
 };
 
 export const load = (async () => {

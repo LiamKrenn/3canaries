@@ -14,8 +14,7 @@
 		<h1 class="h1 mt-2 ml-2">Facebook</h1>
 	</a>
 
-
-    <a
+	<a
 		class="flex items-center justify-center hover:scale-110 duration-150 mt-4"
 		target="_blank"
 		href="https://www.instagram.com/threecanaries.records/"
@@ -24,14 +23,16 @@
 		<InstagramIcon />
 		<h1 class="h1 mt-2 ml-2">Instagram</h1>
 	</a>
-	
-    <a href="/" class="mt-32 underline">
-        <h2 class="h2">Zurück</h2>
-    </a>
-    
+
+	<a href="/" class="mt-32 underline">
+		<h2 class="h2">Zurück</h2>
+	</a>
 </div>
 
 <svelte:head>
 	<title>3Canaries | Social Media</title>
-	<meta name="description" content='Alle Social Media Accounts vom Grazer Plattenladen "Three Canaries Records"' />
+	<meta
+		name="description"
+		content="Alle Social Media Accounts vom Grazer Plattenladen "Three Canaries Records""
+	/>
 </svelte:head>

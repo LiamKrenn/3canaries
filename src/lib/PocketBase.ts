@@ -18,6 +18,8 @@ export async function getTimesPerMonth(d: Date): Promise<Times[]> {
 }
 
 export async function getNews(page: number): Promise<News[]> {
-	const result: News[] = (await pb.collection('news').getList<News>(page, newsPageCount, { sort: '-display_date' })).items;
+	const result: News[] = (
+		await pb.collection('news').getList<News>(page, newsPageCount, { sort: '-display_date' })
+	).items;
 	return structuredClone(result);
 }

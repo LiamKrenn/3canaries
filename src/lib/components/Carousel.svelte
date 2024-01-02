@@ -82,7 +82,7 @@
 					{mount}
 				/>
 				<div
-					class="absolute cursor-default justify-center flex flex-col items-center md:w-[40rem] sm:w-[75%] w-[85%] h-[24rem] xs:h-[20rem]  max-h-[29vh] border-white border-4 text-center"
+					class="absolute cursor-default justify-center flex flex-col items-center md:w-[40rem] sm:w-[75%] w-[85%] h-[24rem] xs:h-[20rem] max-h-[29vh] border-white border-4 text-center"
 				>
 					<h1 class="h1 text-secondary-500">{content[image].title}</h1>
 					<p class="text-white text-2xl mx-6 mt-4">{content[image].content}</p>

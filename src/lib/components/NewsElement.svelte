@@ -10,8 +10,10 @@
 	});
 	const image: boolean = article.image != '';
 
-	let mount = false
-	onMount(() => { mount = true; })
+	let mount = false;
+	onMount(() => {
+		mount = true;
+	});
 </script>
 
 <div
@@ -22,9 +24,8 @@
 	/>
 	<div class="overflow-y-auto hide-scrollbar rounded-t-lg mb-1 relative">
 		{#if image}
-			
 			<img
-				class="w-full h-auto brightness-75 select-none rounded-t-lg "
+				class="w-full h-auto brightness-75 select-none rounded-t-lg"
 				src={`${url}/${article.collectionId}/${article.id}/${article.image_lq}`}
 				alt={`Foto von ${article.title}`}
 				width="192px"

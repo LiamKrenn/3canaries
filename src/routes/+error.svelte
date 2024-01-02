@@ -4,7 +4,10 @@
 
 <svelte:head>
 	<title>Error! {$page.status}</title>
-	<meta name="description" content="Etwas ist schief gegangen. Code: {$page.status} Message: {$page.error?.message}" />
+	<meta
+		name="description"
+		content="Etwas ist schief gegangen. Code: {$page.status} Message: {$page.error?.message}"
+	/>
 </svelte:head>
 
 <div class="h-full w-full flex flex-col justify-center items-center bg-surface-800">
@@ -54,9 +57,7 @@
 			alt="Cat on Vinyl GIF"
 		/>
 		<p class="text-white cursor-default mt-4">
-			Versuch es später oder <a class="text-white underline" href="/"
-				>zurück Hauptseite</a
-			>
+			Versuch es später oder <a class="text-white underline" href="/">zurück Hauptseite</a>
 		</p>
 
 		<p class="absolute bottom-0 mb-8 text-surface-600 cursor-default">
@@ -68,9 +69,7 @@
 	{:else}
 		<h2 class="h2 text-white">Irgendwas funktioniert nicht.</h2>
 		<p class="text-white cursor-default mt-4">
-			Versuche, zur <a class="text-white underline" href="/"
-				>Hauptseite</a
-			> zurück zu kehren.
+			Versuche, zur <a class="text-white underline" href="/">Hauptseite</a> zurück zu kehren.
 		</p>
 
 		<p class="text-surface-300 mt-8 cursor-default">
@@ -78,7 +77,7 @@
 				class="underline cursor-pointer"
 				href="mailto:contact@3canaries.com">melden</a
 			>
-			 sie sich bei uns, mit folgendem Code: "{$page.status}: {$page.error?.message}"
+			sie sich bei uns, mit folgendem Code: "{$page.status}: {$page.error?.message}"
 		</p>
 	{/if}
 </div>

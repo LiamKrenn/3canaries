@@ -3,7 +3,7 @@
 
 	export let time: Times;
 
-  function shortDate(date: string) {
+	function shortDate(date: string) {
 		let d = new Date(date);
 		const options: Intl.DateTimeFormatOptions = {
 			weekday: 'short',
