@@ -1,8 +1,5 @@
 <script lang="ts">
 	import ChevronRight from '$lib/icons/chevron-right.svelte';
-	import type { PageData } from './$types';
-
-	export let data: PageData;
 </script>
 
 <svelte:head>

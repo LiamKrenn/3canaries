@@ -33,6 +33,6 @@
 	<title>3Canaries | Social Media</title>
 	<meta
 		name="description"
-		content="Alle Social Media Accounts vom Grazer Plattenladen "Three Canaries Records""
+		content="Alle Social Media Accounts vom Grazer Plattenladen 'Three Canaries Records'."
 	/>
 </svelte:head>
