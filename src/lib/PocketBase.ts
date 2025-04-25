@@ -2,7 +2,7 @@ import PocketBase, { ListResult } from 'pocketbase';
 import type { News, Times } from '$lib/Types';
 
 const localdev: boolean = false;
-export const domain: string = localdev ? '127.0.0.1:8090' : '3c.krenn.tech:443';
+export const domain: string = localdev ? '127.0.0.1:8090' : '3c.liamk.dev:443';
 export const url: string = `https://${domain}/api/files`;
 export const newsPageCount: number = 6;
 const pb: PocketBase = new PocketBase(`https://${domain}`);
@@ -18,6 +18,8 @@ export async function getTimesPerMonth(d: Date): Promise<Times[]> {
 }
 
 export async function getNews(page: number): Promise<News[]> {
-	const result: News[] = (await pb.collection('news').getList<News>(page, newsPageCount, { sort: '-display_date' })).items;
+	const result: News[] = (
+		await pb.collection('news').getList<News>(page, newsPageCount, { sort: '-display_date' })
+	).items;
 	return structuredClone(result);
 }
